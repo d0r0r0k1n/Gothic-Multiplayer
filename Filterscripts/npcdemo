@@ -1,0 +1,2611 @@
+require "scripts/libs/AIFunctions"
+
+function InitColonyNpc()
+	print("--------------------");
+	print("Init NPCS");
+	print("--------------------");
+	
+	AI_WayNets["WOM_COLONY.ZEN"] = WayNet.create();
+	AI_FreePoints["WOM_COLONY.ZEN"] = FreePointList.create();
+	AI_WayNets["WOM_COLONY.ZEN"]:load("scripts/wps/WOM_COLONY.wp");
+	AI_FreePoints["WOM_COLONY.ZEN"]:load("scripts/wps/WOM_COLONY.fp");
+	local world = "WOM_COLONY.ZEN";
+	
+	SpawnNPC(Bloodhound(), "OW_PATH_012", world);
+	SpawnNPC(Bloodhound(), "PATH_CASTLE_TO_WATERFALL", world);
+	
+	SpawnNPC(Molerat(), "OW_SAWHUT_MOLERAT_SPAWN01", world);
+	SpawnNPC(Molerat(), "OW_SAWHUT_MOLERAT_SPAWN01", world);
+	
+	SpawnNPC(Gobbo_Green(), "PATH_OC_NC_6", world);
+	SpawnNPC(Gobbo_Green(), "PATH_OC_NC_4", world);
+	
+	SpawnNPC(Wolf(), "OW_PATH_02_SPAWN_HOGEWOLF", world);
+	
+	SpawnNPC(Gobbo_Green(), "OW_GOBBO_PLACE_SPAWN", world);
+	SpawnNPC(Gobbo_Green(), "OW_GOBBO_PLACE_SPAWN", world);
+	
+	SpawnNPC(Molerat(), "OW_MOLERAT_CAVE_SPAWN", world);
+	SpawnNPC(Molerat(), "OW_MOLERAT_CAVE_SPAWN", world);
+	SpawnNPC(Molerat(), "OW_MOLERAT_CAVE_SPAWN", world);
+	
+	SpawnNPC(Waran(), "OW_WARAN_G_SPAWN", world);
+	
+	SpawnNPC(Scavenger(), "OW_SCAVENGER_COAST_NEWCAMP_SPAWN", world);
+	SpawnNPC(Scavenger(), "OW_SCAVENGER_COAST_NEWCAMP_SPAWN", world);
+	SpawnNPC(Scavenger(), "OW_SCAVENGER_COAST_NEWCAMP_SPAWN", world);
+	SpawnNPC(Scavenger(), "OW_SCAVENGER_COAST_NEWCAMP_SPAWN", world);
+	
+	SpawnNPC(Bloodfly(), "OW_BLOODFLY_NEW_COAST_SPAWN", world);
+	SpawnNPC(Bloodfly(), "OW_BLOODFLY_NEW_COAST_SPAWN", world);
+	SpawnNPC(Bloodfly(), "OW_BLOODFLY_NEW_COAST_SPAWN", world);
+	SpawnNPC(Bloodfly(), "OW_BLOODFLY_NEW_COAST_SPAWN", world);
+	SpawnNPC(Bloodfly(), "OW_BLOODFLY_NEW_COAST_SPAWN", world);
+	SpawnNPC(Bloodfly(), "OW_BLOODFLY_NEW_COAST_SPAWN", world);
+	
+	SpawnNPC(Scavenger(), "OW_SCAVENGER_CAVE3_SPAWN", world);
+	SpawnNPC(Scavenger(), "OW_SCAVENGER_CAVE3_SPAWN", world);
+	SpawnNPC(Scavenger(), "OW_SCAVENGER_TREE_SPAWN", world);
+	
+	SpawnNPC(Molerat(), "OW_MOLERAT_CAVE_SPAWN", world);
+	
+	SpawnNPC(Wolf(), "OW_WOODRUIN_FOR_WOLF_SPAWN", world);
+	
+	SpawnNPC(Snapper(), "OW_CAVE2_SNAPPER_SPAWN", world);
+	SpawnNPC(Snapper(), "OW_CAVE2_SNAPPER_SPAWN", world);
+	SpawnNPC(Snapper(), "OW_CAVE2_SNAPPER_SPAWN", world);
+	
+	
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER13_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER13_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER13_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER13_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_SCAVENGER_SPAWN_TREE", world);
+	
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_CAVE1_OC", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_CAVE1_OC", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_CAVE1_OC", world);
+	
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCA_05_01", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCA_05_01", world);
+	
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_C3", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_C3", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_C3", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_C3", world);
+	
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_12", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_12", world);
+	
+	SpawnNPC(Molerat(), "SPAWN_OW_SMALLCAVE01_MOLERAT", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_SMALLCAVE01_MOLERAT", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_SMALLCAVE01_MOLERAT", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_OCWOOD_OC2", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_OCWOOD_OC2", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_OLDWOOD1_M", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_OCWOOD_OLDMINE3", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_OCWOOD_OLDMINE3", world);
+	
+	SpawnNPC(Wolf(), "PATH_WALD_OC_WOLFSPAWN2", world);
+	SpawnNPC(Wolf(), "PATH_WALD_OC_WOLFSPAWN2", world);
+	SpawnNPC(Wolf(), "PATH_WALD_OC_WOLFSPAWN2", world);
+	
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_OC_PSI", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_PATH_WOLF_WOOD", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_PATH_WOLF_WOOD", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_PATH_WOLF_WOOD", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_WOOD05_02", world);
+	SpawnNPC(Wolf(), "FP_ROAM_OW_WOLF_08_08", world);
+	SpawnNPC(Wolf(), "FP_ROAM_OW_WOLF_08_08", world);
+	SpawnNPC(Wolf(), "OW_DEADWOOD_WOLF_SPAWN01", world);
+	SpawnNPC(Wolf(), "OW_DEADWOOD_WOLF_SPAWN01", world);
+	SpawnNPC(Wolf(), "OW_DEADWOOD_WOLF_SPAWN01", world);
+	SpawnNPC(Wolf(), "OW_DEADWOOD_WOLF_SPAWN01", world);
+	
+	SpawnNPC(Bloodfly(), "OW_LAKE_NC_BLOODFLY_SPAWN01", world);
+	SpawnNPC(Bloodfly(), "OW_LAKE_NC_BLOODFLY_SPAWN01", world);
+	SpawnNPC(Bloodfly(), "OW_LAKE_NC_BLOODFLY_SPAWN01", world);
+	
+	SpawnNPC(Bloodfly(), "SPAWN_WALD_OC_BLOODFLY01", world);
+	SpawnNPC(Bloodfly(), "SPAWN_WALD_OC_BLOODFLY01", world);
+	SpawnNPC(Bloodfly(), "SPAWN_WALD_OC_BLOODFLY01", world);
+	
+	SpawnNPC(Bloodfly(), "SPAWN_BLOODFLY_LOCATION_29_01", world);
+	SpawnNPC(Bloodfly(), "SPAWN_BLOODFLY_LOCATION_29_01", world);
+	SpawnNPC(Bloodfly(), "SPAWN_BLOODFLY_LOCATION_29_01", world);
+	SpawnNPC(Bloodfly(), "SPAWN_BLOODFLY_LOCATION_29_01", world);
+	
+	SpawnNPC(Bloodfly(), "OW_PATH_BLOODFLY01_SPAWN01", world);
+	SpawnNPC(Bloodfly(), "OW_PATH_BLOODFLY01_SPAWN01", world);
+	SpawnNPC(Bloodfly(), "OW_PATH_BLOODFLY01_SPAWN01", world);
+	SpawnNPC(Bloodfly(), "OW_PATH_BLOODFLY01_SPAWN01", world);
+	SpawnNPC(Bloodfly(), "OW_PATH_BLOODFLY01_SPAWN01", world);
+	
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_WOOD05_01", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_WOOD05_01", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_WOOD05_01", world);
+	
+	SpawnNPC(Lurker(), "SPAWN_OW_NEARBGOBBO_LURKER_A1", world);
+	SpawnNPC(Lurker(), "SPAWN_OW_MINICOAST_LURKER_A1", world);
+	SpawnNPC(Lurker(), "OW_LAKE_NC_LURKER_SPAWN01", world);
+	
+	SpawnNPC(Waran(), "OW_PATH_WARAN06_SPAWN01", world);
+	SpawnNPC(Waran(), "OW_PATH_WARAN06_SPAWN01", world);
+	SpawnNPC(Waran(), "OW_PATH_WARAN06_SPAWN01", world);
+	--SpawnNPC(Waran(), "OW_PATH_WARAN06_SPAWN02", world);Dont know this wp
+	SpawnNPC(Waran(), "OW_PATH_OW_PATH_WARAN05_SPAWN01", world);
+	SpawnNPC(Waran(), "OW_PATH_OW_PATH_WARAN05_SPAWN01", world);
+	SpawnNPC(Waran(), "OW_PATH_OW_PATH_WARAN05_SPAWN01", world);
+	SpawnNPC(Waran(), "OW_PATH_OW_PATH_WARAN05_SPAWN01", world);
+	
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_BLACKGOBBO_A1", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_BLACKGOBBO_A1", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_BLACKGOBBO_A2", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_BLACKGOBBO_A2", world);
+	
+	SpawnNPC(Scavenger(), "SPAWN_SCAVENGER_PATH_OC_PSI_03", world);
+	SpawnNPC(Scavenger(), "SPAWN_SCAVENGER_PATH_OC_PSI_03", world);
+	SpawnNPC(Scavenger(), "SPAWN_SCAVENGER_PATH_OC_PSI_02", world);
+	SpawnNPC(Scavenger(), "SPAWN_SCAVENGER_PATH_OC_PSI_02", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER03_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER03_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER03_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER03_SPAWN01", world);
+	
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER03_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER03_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER03_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER03_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER03_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER03_SPAWN01", world);
+	SpawnNPC(Scavenger(), "OW_PATH_SCAVENGER03_SPAWN01", world);
+	
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_OLDWOOD_C3", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_OLDWOOD_C3", world);
+	
+	SpawnNPC(Scavenger(), "SPAWN_OW_SHADOWBEAST_NEAR_SHADOW4", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SHADOWBEAST_NEAR_SHADOW4", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SHADOWBEAST_NEAR_SHADOW4", world);
+	
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_OCWOOD1", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_OCWOOD1", world);
+	
+	SpawnNPC(Scavenger(), "SPAWN_O_SCAVENGER_05_02", world);
+	SpawnNPC(Scavenger(), "SPAWN_O_SCAVENGER_05_02", world);
+	
+	SpawnNPC(Scavenger(), "SPAWN_O_SCAVENGER_OCWOODL2", world);
+	SpawnNPC(Scavenger(), "SPAWN_O_SCAVENGER_OCWOODL2", world);
+	SpawnNPC(Scavenger(), "SPAWN_SCAVENGERPATH_OC_PSI_14", world);
+	SpawnNPC(Scavenger(), "SPAWN_SCAVENGERPATH_OC_PSI_14", world);
+	
+	SpawnNPC(OrcDog(), "OW_PATH_WOLF04_SPAWN01", world);
+	SpawnNPC(OrcDog(), "OW_PATH_WOLF04_SPAWN01", world);
+	SpawnNPC(OrcDog(), "OW_PATH_WOLF04_SPAWN01", world);
+	SpawnNPC(OrcDog(), "OW_PATH_WOLF04_SPAWN01", world);
+	
+	SpawnNPC(Bloodfly(), "PATH_TAKE_HERB_MOVEMENT2", world);
+	SpawnNPC(Bloodfly(), "PATH_TAKE_HERB_MOVEMENT2", world);
+	SpawnNPC(Bloodfly(), "PATH_TAKE_HERB_MOVEMENT2", world);
+	SpawnNPC(Bloodfly(), "PATH_TAKE_BLOODFLY_SPAWN", world);
+	SpawnNPC(Bloodfly(), "PATH_TAKE_BLOODFLY_SPAWN", world);
+	SpawnNPC(Bloodfly(), "PATH_TAKE_BLOODFLY_SPAWN", world);
+	
+	SpawnNPC(Firewaran(), "OW_COAST_SHIPWRECK_WARAN_2", world);
+	SpawnNPC(Firewaran(), "OW_COAST_SHIPWRECK_WARAN_2", world);
+	SpawnNPC(Firewaran(), "OW_COAST_SHIPWRECK_WARAN_2", world);
+	SpawnNPC(Firewaran(), "OW_COAST_SHIPWRECK_WARAN", world);
+	SpawnNPC(Firewaran(), "OW_COAST_SHIPWRECK_WARAN", world);
+	
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLYS_152", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLYS_152", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLYS_152", world);
+	
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_06_01", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_06_01", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_06_01", world);
+	
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_OC_WOOD03", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_OC_WOOD03", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_OC_WOOD03", world);
+	
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_A_6_NC4", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_A_6_NC4", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_A_6_NC4", world);
+	
+	SpawnNPC(Molerat(), "PATH_WALD_OC_MOLERATSPAWN", world);
+	
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_06_CAVE_GUARD3", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_06_CAVE_GUARD3", world);
+	
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT_WOODOLDMINE2", world);
+	
+	SpawnNPC(Snapper(), "SPAWN_OW_SNAPPER_WOOD05_05", world);
+	SpawnNPC(Snapper(), "SPAWN_OW_SNAPPER_WOOD05_05", world);
+	
+	SpawnNPC(Razor(), "SPAWN_OW_SNAPPER_CAVE_DM", world);
+	SpawnNPC(Razor(), "SPAWN_OW_SNAPPER_CAVE_DM", world);
+	SpawnNPC(Razor(), "SPAWN_OW_SNAPPER_CAVE_DM", world);
+	
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF2_WALD_OC2", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF2_WALD_OC2", world);
+	
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_INWALD_OC2", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_INWALD_OC2", world);
+	
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT2_WALD_OC1", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERAT2_WALD_OC1", world);
+	
+	SpawnNPC(Bloodfly(), "OW_PATH_BLOODFLY02_SPAWN01", world);
+	SpawnNPC(Bloodfly(), "OW_PATH_BLOODFLY02_SPAWN01", world);
+	SpawnNPC(Bloodfly(), "OW_PATH_BLOODFLY02_SPAWN01", world);
+	
+	SpawnNPC(Lurker(), "SPAWN_OW_LURKER_RIVER2", world);
+	
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_OCWOODEND2", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_PSIWOOD2", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_PSIWOOD2", world);
+	
+	SpawnNPC(Scavenger(), "SPAWN_OW_NSCAVENGER_04_PSIWOOD4", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_NSCAVENGER_04_PSIWOOD4", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_NEARSHAD2_PSIWOOD", world);
+	
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_PSIWOOD_5", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_PSIWOOD_5", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_PSIWOOD_5", world);
+	
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_04_PSI5", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_04_PSI5", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_04_PSI5", world);
+	
+	SpawnNPC(Wolf(), "SPAWN_OW_NWOLF_04_PSIWOOD5", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_NWOLF_04_PSIWOOD5", world);
+	
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_NEARSHADOW_PSIWOOD_02", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_NEARSHADOW_PSIWOOD_02", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_NEARSHADOW_PSIWOOD_02", world);
+	
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLFL__PSIWOOD_OUT4", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLFL__PSIWOOD_OUT4", world);
+	
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_NEARSHAD2_PSIWOOD_OUT", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF_NEARSHAD2_PSIWOOD_OUT", world);
+	
+	SpawnNPC(Gobbo_Green(), "SPAWN_OW_GOBBO_WATERFALLCAVE_2", world);
+	SpawnNPC(Gobbo_Green(), "SPAWN_OW_GOBBO_WATERFALLCAVE_2", world);
+	SpawnNPC(Gobbo_Green(), "SPAWN_OW_GOBBO_WATERFALLCAVE_2", world);
+	
+	SpawnNPC(Molerat(), "FP_ROAM_OW_MOLERAT_04_PSI", world);
+	SpawnNPC(Molerat(), "FP_ROAM_OW_MOLERAT_04_PSI", world);
+	
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERATN_PSIWOOD_1", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERATN_PSIWOOD_1", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERATL__PSIWOOD_01", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERATL__PSIWOOD_01", world);
+	
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_NEARSHADOW_PSIWOOD_01", world);
+	
+	SpawnNPC(Shadowbeast(), "SPAWN_OW_SHADOWBEAST2_PSIWOOD_02", world);
+	SpawnNPC(Shadowbeast(), "SPAWN_OW_SHADOWBEAST_10_03", world);
+	
+	SpawnNPC(Razor(), "SPAWN_OW_BLOCKGOBBO_CAVE_DM6", world);
+	SpawnNPC(Razor(), "SPAWN_OW_BLOCKGOBBO_CAVE_DM6", world);
+	SpawnNPC(Razor(), "SPAWN_OW_BLOCKGOBBO_CAVE_DM6", world);
+	SpawnNPC(Razor(), "SPAWN_OW_BLOCKGOBBO_CAVE_DM6", world);
+	
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_BLACKGOBBO_A1", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_BLACKGOBBO_A1", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_BLACKGOBBO_A1", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_BLACKGOBBO_A1", world);
+	
+	SpawnNPC(OrcDog(), "SPAWN_OW_BLACKWOLF_02_01", world);
+	SpawnNPC(OrcDog(), "SPAWN_OW_BLACKWOLF_02_01", world);
+	SpawnNPC(OrcDog(), "SPAWN_OW_BLACKWOLF_02_01", world);
+	
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_LONE_WALD_OC3", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_ENTRANCE_SCAVENGER_OC1_02", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVNEGER_04_PSI3", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVNEGER_04_PSI3", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_NEARSHAD2_PSIWOOD3", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_NEARSHAD2_PSIWOOD3", world);
+	
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_PSIWOOD_02", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_PSIWOOD_02", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_PSIWOOD_02", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLY_PSIWOOD_02", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLYS_PSIWOOD_4", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLYS_PSIWOOD_4", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLYS_PSIWOOD_4", world);
+	SpawnNPC(Bloodfly(), "SPAWN_OW_BLOODFLYS_PSIWOOD_4", world);
+	
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF2_WALD_OC3", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLF2_WALD_OC3", world);
+	
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLFK__PSIWOOD_OUT3", world);
+	SpawnNPC(Wolf(), "SPAWN_OW_WOLFK__PSIWOOD_OUT3", world);
+	
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERATT_04_PSI1", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERATT_04_PSI1", world);
+	SpawnNPC(Molerat(), "SPAWN_OW_MOLERATT_04_PSI1", world);
+	
+	
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_GOBBOCAVE_03_01", world);
+	SpawnNPC(Scavenger(), "SPAWN_OW_SCAVENGER_GOBBOCAVE_03_01", world);
+	
+	SpawnNPC(Snapper(), "SPAWN_OW_SNAPPER_OCWOOD1_05_02", world);
+	SpawnNPC(Snapper(), "SPAWN_OW_SNAPPER_OCWOOD1_05_02", world);
+	
+	
+	SpawnNPC(Waran(), "SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01", world);
+	SpawnNPC(Waran(), "SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01", world);
+	SpawnNPC(Waran(), "SPAWN_OW_WARAN_OC_PSI_GOBBOCAVE_01", world);
+	
+	SpawnNPC(Gobbo_Black(), "SPAWN_GOBBO_LOCATION_29_03", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_GOBBO_LOCATION_29_03", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_GOBBO_LOCATION_29_03", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_GOBBO_LOCATION_29_03", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_GOBBO_LOCATION_29_03", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_GOBBO_LOCATION_29_03", world);
+	
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_GOBBO_CAVE03INDOOR_05", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_GOBBO_CAVE03INDOOR_05", world);
+	
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_GOBBO_CAVE03INDOOR_02", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_GOBBO_CAVE03INDOOR_02", world);
+	SpawnNPC(Gobbo_Black(), "SPAWN_OW_GOBBO_CAVE03INDOOR_02", world);
+	
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE5", world);
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE5", world);
+	
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE7", world);
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE7", world);
+	
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE8", world);
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE8", world);
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE8", world);
+	
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE9", world);
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE9", world);
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE9", world);
+	
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE10", world);
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE10", world);
+	SpawnNPC(Gobbo_Black(), "GOBBO_MASTERCAVE10", world);--1452
+	
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_OC_PSI_RUIN1", world);
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_OC_PSI_RUIN1", world);
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_04_02_1", world);
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_04_02_1", world);
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_04_02_1", world);
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_04_02_1", world);
+
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_BANDIT_02", world);
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_OCWALD_PSI_PATH2", world);
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_OCWALD_PSI_PATH2", world);
+
+	SpawnNPC(Molerat(),"SPAWN_OW_MOLERAT_PSI_PATH7", world);
+	SpawnNPC(Molerat(),"SPAWN_OW_MOLERAT_PSI_PATH7", world);
+	SpawnNPC(Molerat(),"SPAWN_OW_MOLERAT_PSI_PATH7", world);
+	SpawnNPC(Molerat(),"SPAWN_OW_MOLERAT_PSI_PATH7", world);
+	SpawnNPC(Molerat(),"SPAWN_OW_MOLERAT_03_04", world);
+	SpawnNPC(Molerat(),"SPAWN_OW_MOLERAT_03_04", world);
+	SpawnNPC(Molerat(),"SPAWN_OW_MOLERAT_03_04", world);
+	SpawnNPC(Waran(),"SPAWN_OW_WARAN_OC_PSI3", world);
+	SpawnNPC(Waran(),"FP_ROAM_OW_WARAN_OCWALD_PSI_PATH4", world);
+	SpawnNPC(Waran(),"FP_ROAM_OW_WARAN_OCWALD_PSI_PATH4", world);
+	SpawnNPC(Waran(),"FP_ROAM_OW_WARAN_OCWALD_PSI_PATH4", world);
+	SpawnNPC(Waran(),"SPAWN_OW_WARAN_NC_03", world);
+	SpawnNPC(Waran(),"SPAWN_OW_WARAN_NC_03", world);
+	SpawnNPC(Waran(),"SPAWN_OW_WARAN_CAVE1_1", world);
+	SpawnNPC(Waran(),"SPAWN_OW_WARAN_CAVE1_1", world);
+	SpawnNPC(Firewaran(),"SPAWN_OW_WARAN_DEMON_01", world);
+	SpawnNPC(Firewaran(),"SPAWN_OW_WARAN_DEMON_01", world);
+	SpawnNPC(Waran(),"SPAWN_OW_WARAN_EBENE2_02_05", world);
+	SpawnNPC(Waran(),"SPAWN_OW_WARAN_EBENE2_02_05", world);
+	SpawnNPC(Waran(),"SPAWN_OW_WARAN_EBENE2_02_05", world);
+	SpawnNPC(Waran(),"SPAWN_OW_WARAN_EBENE_02_05", world);
+	SpawnNPC(Waran(),"SPAWN_OW_WARAN_EBENE_02_05", world);
+	SpawnNPC(Waran(),"SPAWN_OW_WARAN_EBENE_02_05", world);
+	
+	
+	SpawnNPC(Snapper(),"SPAWN_OW_WARAN_01_BADITS6", world);
+	SpawnNPC(Snapper(),"SPAWN_OW_WARAN_01_BADITS6", world);
+
+	SpawnNPC(Lurker(),"SPAWN_OW_LURKER_RIVER2_BEACH3", world);
+	SpawnNPC(Lurker(),"SPAWN_OW_LURKER_RIVER2_BEACH3_2", world);
+	SpawnNPC(Lurker(),"SPAWN_OW_LURKER_BEACH_02", world);
+
+	SpawnNPC(Snapper(),"SPAWN_OW_SCA_01_BADITS7", world);
+	SpawnNPC(Snapper(),"SPAWN_OW_SCA_01_BADITS7", world);
+	SpawnNPC(Snapper(),"SPAWN_OW_SCA_01_BADITS2", world);
+	SpawnNPC(Snapper(),"SPAWN_OW_SCA_01_BADITS2", world);
+
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_WOOD10_04", world);
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_WOOD10_04", world);
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_WOOD10_04", world);
+	SpawnNPC(Scavenger(),"SPAWN_SCAVENGEROW_PATH_280", world);
+
+	SpawnNPC(Bloodfly(),"SPAWN_OW_BLOODFLY_01_OCWOOD1_OCW5", world);
+	SpawnNPC(Bloodfly(),"SPAWN_OW_BLOODFLY_01_OCWOOD1_OCW5", world);
+	SpawnNPC(Bloodfly(),"SPAWN_OW_BLOODFLY_01_OCWOOD1_OCW5", world);
+	SpawnNPC(Bloodfly(),"SPAWN_OW_BLOODFLY_01_OCWOOD1_OCW5", world);
+	SpawnNPC(Bloodfly(),"SPAWN_BLOODFLYPATH_OC_PSI_14", world);
+	SpawnNPC(Bloodfly(),"SPAWN_BLOODFLYPATH_OC_PSI_14", world);
+
+	SpawnNPC(YoungMolerat(),"SPAWN_MOLERAT02_SPAWN01", world);
+	SpawnNPC(YoungScavenger(),"SPAWN_SCAVENGER_TOTU_LEFT_PLAT", world);
+	SpawnNPC(YoungScavenger(),"SPAWN_SCAVENGER2_TOTU_LEFT_PLAT2", world);
+
+	SpawnNPC(YoungMolerat(),"SPAWN_MOLELRAT_TOTU_LEFT_PLAT4", world);
+	SpawnNPC(YoungMolerat(),"SPAWN_MOLELRAT_TOTU_LEFT_PLAT4", world);
+	SpawnNPC(Gobbo_Green(),"SPAWN_OW_GOBBO_01_01", world);
+	SpawnNPC(YoungScavenger(),"SPAWN_TOTURIAL_CHICKEN_2_2", world);
+	SpawnNPC(YoungScavenger(), "OW_PATH_1_5_4", world);
+	SpawnNPC(YoungScavenger(),"SPAWN_OW_BLOODFLY_E_3", world);
+	SpawnNPC(YoungScavenger(),"SPAWN_OW_BLOODFLY_E_3", world);
+	SpawnNPC(YoungScavenger(),"SPAWN_GOBBO_OW_PATH_1_6", world);
+	SpawnNPC(YoungScavenger(),"SPAWN_GOBBO_OW_PATH_1_6", world);
+	SpawnNPC(YoungScavenger(),"SPAWN_GOBBO_OW_PATH_1_6", world);
+	SpawnNPC(YoungScavenger(),"SPAWN_OW_STARTSCAVNGERBO_01_02", world);
+	SpawnNPC(YoungScavenger(),"SPAWN_OW_STARTSCAVENGER_02_01", world);
+
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_06_04", world);
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_06_04", world);
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_06_04", world);
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_06_04", world);
+
+	SpawnNPC(Scavenger(),"SPAWN_OW_SCAVENGER_AL_ORC", world);
+	SpawnNPC(Scavenger(),"HELPPOINT", world);
+
+	SpawnNPC(Scavenger(),"OW_PATH_075_GUARD2", world);
+	SpawnNPC(Scavenger(),"OW_PATH_075_GUARD3", world);
+	SpawnNPC(Scavenger(),"OW_PATH_075_GUARD4", world);
+	SpawnNPC(Molerat(),"OW_PATH_084", world);
+	SpawnNPC(Molerat(),"OW_PATH_086", world);
+	SpawnNPC(Molerat(),"OW_PATH_3001", world);
+	SpawnNPC(Wolf(),"OW_PATH_3001_MOVE", world);
+	SpawnNPC(Molerat(),"OW_PATH_3001_MOVE5", world);
+	SpawnNPC(Wolf(),"SPAWN_TALL_PATH_BANDITOS2_03", world);
+
+	SpawnNPC(Waran(),"OW_PATH_BANDITOS01", world);
+	SpawnNPC(Waran(),"SPAWN_ROAM_OW_WARAN_RUIN", world);
+	SpawnNPC(Waran(),"SPAWN_ROAM_OW_WARAN_RUIN", world);
+	SpawnNPC(Waran(),"SPAWN_ROAM_OW_WARAN_RUIN", world);
+
+	SpawnNPC(Snapper(),"OW_PATH_ABYSS_4", world);
+	SpawnNPC(Snapper(),"OW_PATH_ABYSS_4", world);
+
+	SpawnNPC(Snapper(),"OW_MONSTER_NAVIGATE", world);
+	SpawnNPC(Snapper(),"OW_MONSTER_NAVIGATE", world);
+	SpawnNPC(Snapper(),"OW_MONSTER_NAVIGATE", world);
+	SpawnNPC(Snapper(),"OW_MONSTER_NAVIGATE", world);
+	--SpawnNPC(Snapper(),"OW_MONSTER_NAVIGATE02", world);--Dont know the wp...
+	--SpawnNPC(Snapper(),"OW_MONSTER_NAVIGATE02", world);--Dont know the wp...
+	SpawnNPC(Snapper(),"OW_PATH_179", world);
+	SpawnNPC(Snapper(),"OW_PATH_179", world);
+
+	SpawnNPC(Snapper(),"OW_ABYSS_SPAWN_WARAN", world);
+	SpawnNPC(Snapper(),"OW_ABYSS_SPAWN_WARAN", world);
+	SpawnNPC(Snapper(),"SPAWN_ABYSS_TO_CAVE_MOVE", world);
+	SpawnNPC(Snapper(),"SPAWN_ABYSS_TO_CAVE_MOVE", world);
+
+
+	SpawnNPC(Snapper(),"OW_PATH_SNAPPER04_SPAWN01", world);
+	SpawnNPC(Snapper(),"OW_PATH_SNAPPER04_SPAWN01", world);
+	SpawnNPC(Snapper(),"OW_PATH_SNAPPER04_SPAWN01", world);
+	SpawnNPC(Snapper(),"OW_PATH_SNAPPER04_SPAWN01", world);
+	SpawnNPC(Snapper(),"OW_PATH_SNAPPER04_SPAWN01", world);
+	SpawnNPC(Snapper(),"OW_PATH_SNAPPER04_SPAWN01", world);
+	SpawnNPC(Snapper(),"OW_PATH_SNAPPER04_SPAWN02", world);
+	SpawnNPC(Snapper(),"OW_PATH_SNAPPER04_SPAWN02", world);
+	SpawnNPC(Snapper(),"OW_PATH_SNAPPER04_SPAWN02", world);
+	SpawnNPC(Snapper(),"OW_PATH_SNAPPER04_SPAWN02", world);
+
+	SpawnNPC(Shadowbeast(),"OW_PATH_TEMPELRUIN06", world);
+
+	SpawnNPC(Bloodhound(),"OW_PATH_07_15_CAVE3", world);
+	SpawnNPC(Snapper(),"OW_PATH_07_15", world);
+	SpawnNPC(Snapper(),"OW_PATH_07_15", world);
+	SpawnNPC(Snapper(),"OW_PATH_07_15", world);
+	SpawnNPC(Snapper(),"OW_PATH_07_15", world);
+
+	SpawnNPC(Bloodhound(),"OW_PATH_274", world);
+
+	SpawnNPC(SkeletonSH(),"LOCATION_05_02_STONEHENGE2", world);
+	SpawnNPC(SkeletonSH(),"LOCATION_05_02_STONEHENGE2", world);
+	SpawnNPC(SkeletonSH(),"LOCATION_05_02_STONEHENGE3", world);
+	SpawnNPC(SkeletonSH(),"LOCATION_05_02_STONEHENGE3", world);
+	SpawnNPC(SkeletonSH(),"LOCATION_05_02_STONEHENGE5", world);
+	SpawnNPC(SkeletonSH(),"LOCATION_05_02_STONEHENGE5", world);
+
+	   
+	SpawnNPC(Gobbo_Warrior(),"LOCATION_12_01", world);
+	SpawnNPC(Gobbo_Warrior(),"LOCATION_12_01", world);
+	SpawnNPC(Gobbo_Warrior(),"LOCATION_12_01", world);
+	SpawnNPC(Gobbo_Warrior(),"LOCATION_12_01", world);
+
+	SpawnNPC(Gobbo_Warrior(),"SPAWN_BLACKGOBBO_SHRINKSCROLL", world);
+	SpawnNPC(Gobbo_Warrior(),"SPAWN_BLACKGOBBO_SHRINKSCROLL", world);
+	SpawnNPC(Gobbo_Warrior(),"SPAWN_BLACKGOBBO_SHRINKSCROLL", world);
+	SpawnNPC(Gobbo_Warrior(),"SPAWN_BLACKGOBBO_SHRINKSCROLL", world);
+
+	SpawnNPC(Gobbo_Warrior(),"LOCATION_12_14", world);
+	SpawnNPC(Gobbo_Warrior(),"LOCATION_12_14", world);
+	SpawnNPC(Gobbo_Warrior(),"LOCATION_12_14", world);
+	SpawnNPC(Gobbo_Warrior(),"LOCATION_12_14", world);
+
+	SpawnNPC(Troll(),"LOCATION_12_14", world);
+
+	SpawnNPC(Harpie(),"LOCATION_12_09", world);
+	SpawnNPC(Harpie(),"LOCATION_12_09", world);
+	SpawnNPC(Harpie(),"LOCATION_12_09", world);
+	SpawnNPC(Harpie(),"LOCATION_12_09", world);
+	 
+
+	SpawnNPC(Bloodhound(),"PLATEAU_ROUND01", world);
+	SpawnNPC(Bloodhound(),"PLATEAU_ROUND02", world);
+	SpawnNPC(Bloodhound(),"PLATEAU_ROUND02_CAVE", world);
+	SpawnNPC(Bloodhound(),"PLATEAU_ROUND02_CAVE_MOVE", world);
+	SpawnNPC(Bloodhound(),"LOCATION_18_OUT", world);
+	SpawnNPC(Bloodhound(),"PATH_TO_PLATEAU04", world);
+	SpawnNPC(Bloodhound(),"PATH_TO_PLATEAU04_RIGHT", world);
+	SpawnNPC(Bloodhound(),"PATH_TO_PLATEAU04_SMALLPATH", world);
+
+	SpawnNPC(BridgeGolem(),"PATH_TO_PLATEAU04_BRIDGE2", world);
+
+	SpawnNPC(Harpie(),"LOCATION_19_03_PATH_RUIN7", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_PATH_RUIN8", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_PATH_RUIN9", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_PATH_RUIN10", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_PATH_RUIN11", world);
+
+	SpawnNPC(Harpie(),"LOCATION_19_03_PEMTAGRAM_MOVEMENT", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_PEMTAGRAM2", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_PEMTAGRAM_MOVEMENT", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_PENTAGRAMM", world);
+
+	SpawnNPC(Harpie(),"LOCATION_19_03_ROOM6", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_ROOM6_BARRELCHAMBER", world);
+
+	SpawnNPC(SkeletonSH(),"LOCATION_19_03_ROOM6_BARRELCHAMBER2", world);
+	SpawnNPC(SkeletonSH(),"LOCATION_19_03_ROOM6_BARRELCHAMBER2", world);
+	SpawnNPC(SkeletonSH(),"LOCATION_19_03_ROOM6_BARRELCHAMBER2", world);
+
+	SpawnNPC(Harpie(),"LOCATION_19_03_ROOM3", world);
+
+	SpawnNPC(Harpie(),"LOCATION_19_03_SECOND_HARPYE1", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_SECOND_HARPYE2", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_SECOND_ETAGE6", world);
+
+	SpawnNPC(Harpie(),"LOCATION_19_03_SECOND_HARPYE3", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_SECOND_HARPYE4", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_SECOND_ETAGE7", world);
+
+	SpawnNPC(Harpie(),"LOCATION_19_03_BALCONY2", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_BALCONY3", world);
+	SpawnNPC(Harpie(),"LOCATION_19_03_BALCONY4", world);
+
+	SpawnNPC(Swampshark(),"PATH_AROUND_PSI10", world);
+	SpawnNPC(Swampshark(),"PATH_AROUND_PSI11", world);
+	SpawnNPC(Swampshark(),"PATH_AROUND_PSI13", world);
+	SpawnNPC(Swampshark(),"PATH_AROUND_PSI15", world);
+	SpawnNPC(Swampshark(),"PATH_AROUND_PSI18", world);
+	SpawnNPC(Swampshark(),"PATH_AROUND_PSI19", world);
+	SpawnNPC(Swampshark(),"PATH_AROUND_PSI20", world);
+	SpawnNPC(Swampshark(),"PATH_AROUND_PSI20", world);
+	SpawnNPC(Swampshark(),"PATH_AROUND_PSI21", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY08_SPAWN01", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY08_SPAWN01", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY09_SPAWN01", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY09_SPAWN01", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY10_SPAWN01", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY10_SPAWN01", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY11_SPAWN01", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY11_SPAWN01", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY11_SPAWN01", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY12_SPAWN01", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY12_SPAWN01", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY13_SPAWN01", world);
+	SpawnNPC(Bloodfly(),"OW_PATH_BLOODFLY13_SPAWN01", world);
+	SpawnNPC(Razor(),"OW_PATH_SNAPPER02_SPAWN01", world);
+	SpawnNPC(Razor(),"OW_PATH_SNAPPER02_SPAWN01", world);
+	SpawnNPC(Razor(),"OW_PATH_SNAPPER02_SPAWN01", world);
+
+	SpawnNPC(Razor(),"SPAWN_OW_SNAPPER_INCAVE_DM2", world);
+	SpawnNPC(Razor(),"SPAWN_OW_SNAPPER_INCAVE_DM2", world);
+
+	SpawnNPC(OrcBiter(),"SPAWN_OW_SCAVENGER_01_DEMONT5", world);
+	SpawnNPC(OrcBiter(),"SPAWN_OW_SCAVENGER_01_DEMONT5", world);
+	SpawnNPC(OrcBiter(),"SPAWN_OW_SCAVENGER_01_DEMONT5", world);
+
+	SpawnNPC(Firewaran(),"OW_PATH_SCAVENGER15_SPAWN01", world);
+
+	SpawnNPC(OrcBiter(),"SPAWN_OW_SCAVENGER_ORC_03", world);
+	SpawnNPC(OrcBiter(),"SPAWN_OW_SCAVENGER_ORC_03", world);
+	SpawnNPC(OrcWarrior2(),"OW_PATH_RUIN_7", world);
+	SpawnNPC(OrcWarrior2(),"OW_PATH_RUIN_7", world);
+	SpawnNPC(OrcDog(),"FP_ROAM_OW_SNAPPER_OW_ORC", world);
+	SpawnNPC(OrcDog(),"FP_ROAM_OW_SNAPPER_OW_ORC", world);
+	SpawnNPC(OrcDog(),"FP_ROAM_OW_SNAPPER_OW_ORC", world);
+	SpawnNPC(OrcDog(),"FP_ROAM_OW_SNAPPER_OW_ORC", world);
+	SpawnNPC(OrcDog(),"FP_ROAM_OW_SNAPPER_OW_ORC", world);
+	SpawnNPC(OrcDog(),"FP_ROAM_OW_SNAPPER_OW_ORC", world);
+
+	SpawnNPC(OrcWarrior1(),"OW_PATH_104", world);
+	SpawnNPC(OrcWarrior1(),"OW_PATH_104", world);
+	SpawnNPC(OrcWarrior1(),"OW_PATH_104", world);
+	SpawnNPC(OrcWarrior2(),"OW_PATH_104", world);
+
+	SpawnNPC(OrcDog(),"OW_PATH_BLACKWOLF07_SPAWN01", world);
+	SpawnNPC(OrcDog(),"OW_PATH_BLACKWOLF07_SPAWN01", world);
+	SpawnNPC(OrcDog(),"OW_PATH_BLACKWOLF07_SPAWN01", world);
+	SpawnNPC(OrcDog(),"OW_PATH_BLACKWOLF07_SPAWN01", world);
+	SpawnNPC(OrcDog(),"OW_PATH_BLACKWOLF07_SPAWN01", world);
+	SpawnNPC(OrcDog(),"OW_PATH_BLACKWOLF07_SPAWN01", world);
+
+	SpawnNPC(OrcScout(),"CASTLE_2", world);
+
+	SpawnNPC(OrcWarrior1(),"CASTLE_3", world);
+	SpawnNPC(OrcWarrior1(),"CASTLE_3", world);
+	SpawnNPC(OrcWarrior1(),"CASTLE_4", world);
+	SpawnNPC(OrcWarrior2(),"OW_PATH_109", world);
+
+	SpawnNPC(OrcDog(),"SPAWN_OW_BLACKWOLF_02_01", world);
+	SpawnNPC(OrcDog(),"SPAWN_OW_BLACKWOLF_02_01", world);
+	SpawnNPC(OrcDog(),"SPAWN_OW_BLACKWOLF_02_01", world);
+	SpawnNPC(OrcDog(),"SPAWN_OW_BLACKWOLF_02_01", world);
+	SpawnNPC(OrcDog(),"SPAWN_OW_BLACKWOLF_02_01", world);
+	SpawnNPC(OrcDog(),"SPAWN_OW_BLACKWOLF_02_01", world);
+
+	SpawnNPC(OrcWarrior1(),"OW_PATH_195", world);
+	SpawnNPC(OrcWarrior1(),"OW_PATH_195", world);
+	SpawnNPC(OrcWarrior1(),"OW_PATH_195", world);
+	SpawnNPC(OrcWarrior2(),"OW_PATH_195", world);
+
+	SpawnNPC(OrcDog(),"OW_ORC_ORCDOG_SPAWN01", world);
+	SpawnNPC(OrcDog(),"OW_ORC_ORCDOG_SPAWN01", world);
+	SpawnNPC(OrcDog(),"OW_ORC_ORCDOG_SPAWN01", world);
+
+	SpawnNPC(OrcWarrior1(),"OW_ORC_ORCDOG_SPAWN01_MOVEMENT", world);
+	SpawnNPC(OrcWarrior1(),"OW_ORC_ORCDOG_SPAWN01_MOVEMENT", world);
+
+	SpawnNPC(OrcBiter(),"SPAWN_OW_MOLERAT_ORC_04", world);
+	SpawnNPC(OrcBiter(),"SPAWN_OW_MOLERAT_ORC_04", world);
+	SpawnNPC(OrcBiter(),"SPAWN_OW_MOLERAT_ORC_04", world);
+
+	SpawnNPC(OrcBiter(),"OW_PATH_103", world);
+	SpawnNPC(OrcBiter(),"OW_PATH_103", world);
+
+	SpawnNPC(OrcBiter(),"SPAWN_OW_WOLF_NEAR_SHADOW3", world);
+
+	SpawnNPC(OrcBiter(),"OW_PATH_3_07", world);
+	SpawnNPC(OrcBiter(),"OW_PATH_3_07", world);
+	SpawnNPC(OrcBiter(),"OW_PATH_3_07", world);
+	SpawnNPC(OrcBiter(),"OW_PATH_3_07", world);
+
+	SpawnNPC(OrcScout(),"OW_PATH_3_06", world);
+
+	SpawnNPC(OrcWarrior1(),"OW_PATH_3_05", world);
+	SpawnNPC(OrcWarrior1(),"OW_PATH_3_05", world);
+	SpawnNPC(OrcWarrior1(),"OW_PATH_3_05", world);
+	SpawnNPC(OrcWarrior2(),"OW_PATH_3_05", world);
+
+	SpawnNPC(OrcWarrior2(),"OW_ORCBRIDGE_END", world);
+	SpawnNPC(OrcWarrior2(),"OW_ORCBRIDGE_END", world);
+	SpawnNPC(OrcWarrior2(),"OW_ORC_BRIDGE_GUARD", world);
+	SpawnNPC(OrcWarrior2(),"OW_ORC_BRIDGE_GUARD", world);
+
+	SpawnNPC(OrcWarrior2(),"OW_ORC_PATH_02_MOVEMENT", world);
+	SpawnNPC(OrcWarrior2(),"OW_ORC_PATH_02_MOVEMENT", world);
+
+	SpawnNPC(OrcWarrior2(),"OW_ORC_PATH_02_MOVE", world);
+	SpawnNPC(OrcWarrior3(),"OW_ORC_PATH_02_MOVE", world);
+
+	SpawnNPC(OrcScout(),"OW_ORC_PLACE_01_MOVEMENT", world);
+	SpawnNPC(OrcScout(),"OW_ORC_PLACE_01_MOVEMENT2", world);
+	SpawnNPC(OrcScout(),"OW_ORC_PLACE_01_MOVEMENT3", world);
+	SpawnNPC(OrcScout(),"OW_ORC_HUT_01", world);
+	SpawnNPC(OrcScout(),"OW_ORC_HUT_02", world);
+	SpawnNPC(OrcScout(),"OW_ORC_HUT_01", world);
+	SpawnNPC(OrcScout(),"OW_ORC_PLACE_01", world);
+	SpawnNPC(OrcScout(),"OW_ORC_PLACE_01", world);
+	SpawnNPC(OrcScout(),"OW_ORC_PLACE_01_MOVEMENT", world);
+	SpawnNPC(OrcScout(),"OW_ORC_HUT_02", world);
+
+	SpawnNPC(OrcWarrior2(),"OW_ORC_PATH_02_GUARD_SPAWN", world);
+	SpawnNPC(OrcWarrior2(),"OW_ORC_PATH_02_GUARD_SPAWN", world);
+	SpawnNPC(OrcWarrior2(),"OW_ORC_PATH_04", world);
+	SpawnNPC(OrcWarrior2(),"OW_ORC_PATH_04_MOVEMENT", world);
+	SpawnNPC(OrcWarrior2(),"OW_ORC_PATH_04_MOVEMENT", world);
+	SpawnNPC(OrcWarrior3(),"OW_ORC_PATH_WALL", world);
+
+	SpawnNPC(OrcScout(),"OW_ORC_HUT_03", world);
+	SpawnNPC(OrcScout(),"OW_ORC_HUT_03", world);
+	SpawnNPC(OrcScout(),"OW_ORC_HUT_04", world);
+	SpawnNPC(OrcScout(),"OW_ORC_HUT_03_MOVEMENT", world);
+	SpawnNPC(OrcScout(),"OW_ORC_HUT_03_MOVEMENT", world);
+	SpawnNPC(OrcScout(),"OW_ORC_PATH_06_1", world);
+	SpawnNPC(OrcScout(),"OW_ORC_HUT_03", world);
+	SpawnNPC(OrcScout(),"OW_ORC_HUT_04", world);
+
+	SpawnNPC(OrcScout(),"OW_ORC_PATH_06_2", world);
+	SpawnNPC(OrcScout(),"OW_ORC_PATH_06_2", world);
+	SpawnNPC(OrcWarrior2(),"OW_ORC_PATH_06_4", world);
+	SpawnNPC(OrcWarrior2(),"OW_ORC_PATH_06_4", world);
+
+	SpawnNPC(OrcWarrior4(),"OW_ORC_SHAMAN_PATH1", world);
+	SpawnNPC(OrcWarrior4(),"OW_ORC_SHAMAN_PATH1", world);
+
+	SpawnNPC(OrcWarrior3(),"OW_PATH_06_13_GUARD", world);
+	SpawnNPC(OrcWarrior4(),"OW_PATH_06_13_GUARD1", world);
+	SpawnNPC(OrcWarrior4(),"OW_PATH_06_13_GUARD1", world);
+	SpawnNPC(OrcWarrior4(),"OW_PATH_06_13_GUARD2", world);
+
+	SpawnNPC(OrcShaman(),"OW_PATH_06_14_HEILIGTUM", world);
+	SpawnNPC(OrcShaman(),"OW_PATH_06_14_HEILIGTUM2", world);
+	SpawnNPC(OrcShaman(),"OW_PATH_06_14_HEILIGTUM3", world);
+	SpawnNPC(OrcShaman(),"OW_PATH_06_14_HEILIGTUM4", world);
+	SpawnNPC(StoneGolem(),"OW_PATH_123", world);
+	SpawnNPC(IceGolem(),"OW_PATH_125", world);
+	SpawnNPC(FireGolem(),"OW_PATH_127", world);
+
+	SpawnNPC(OrcScout(),"BRIDGE_CASTLE_TO_PLATEAU", world);
+	SpawnNPC(OrcScout(),"CASTLE_16", world);
+
+	SpawnNPC(Skeleton(), "OW_FOGDUNGEON_06", world); 
+
+	SpawnNPC(SkeletonScout(),"OW_FOGDUNGEON_SKELETT_SPAWN", world);
+	SpawnNPC(Skeleton(), "OW_FOGDUNGEON_09", world); 
+
+	SpawnNPC(SkeletonWarrior(),"OW_FOGDUNGEON_SKELETT_SPAWN", world);
+
+	SpawnNPC(Skeleton(),"OW_FOGDUNGEON_16", world);
+	SpawnNPC(SkeletonScout(),"OW_FOGDUNGEON_28", world);
+	SpawnNPC(SkeletonWarrior(),"OW_FOGDUNGEON_28", world);
+	SpawnNPC(SkeletonWarrior(),"OW_FOGDUNGEON_23", world);
+	SpawnNPC(SkeletonWarrior(),"OW_FOGDUNGEON_24", world);
+	SpawnNPC(SkeletonScout(),"OW_FOGDUNGEON_19", world);
+	SpawnNPC(Skeleton(),"OW_FOGDUNGEON_20", world);
+
+	SpawnNPC(Skeleton(),"OW_FOGDUNGEON_36", world); 
+	SpawnNPC(Skeleton(),"OW_FOGDUNGEON_36_MOVEMENT", world); 
+	SpawnNPC(SkeletonWarrior(),"OW_FOGDUNGEON_36_MOVEMENT", world); 
+	SpawnNPC(Skeleton(),"OW_FOGDUNGEON_36_MOVEMENT2", world); 
+	SpawnNPC(SkeletonScout(),"OW_FOGDUNGEON_36_MOVEMENT2", world);
+	SpawnNPC(SkeletonWarrior(),"OW_FOGDUNGEON_37", world); 
+	SpawnNPC(SkeletonMage(),"OW_FOGDUNGEON_37", world);
+
+	SpawnNPC(Skeleton(), "OW_FOGDUNGEON_40", world); 
+	SpawnNPC(SkeletonScout(), "OW_FOGDUNGEON_40", world);
+	SpawnNPC(Skeleton(), "OW_FOGDUNGEON_43", world); 
+	SpawnNPC(SkeletonWarrior(), "OW_FOGDUNGEON_43", world); 
+
+	SpawnNPC(SkeletonWarrior(),"MAGICTOWER_01", world); 
+	SpawnNPC(SkeletonScout(),"MAGICTOWER_01", world); 
+
+	SpawnNPC(SkeletonWarrior(),"MAGICTOWER_STAIRS", world); 
+	SpawnNPC(SkeletonScout(),"MAGICTOWER_STAIRS", world); 
+
+	SpawnNPC(SkeletonMage(),"MAGICTOWER_02", world); 
+
+	SpawnNPC(Zombie(), "MAGICTOWER_COR", world); 
+	SpawnNPC(Zombie2(),"MAGICTOWER_COR", world); 
+
+	SpawnNPC(Zombie3(),"MAGICTOWER_SAT", world); 
+	SpawnNPC(Zombie4(),"MAGICTOWER_SAT", world); 
+
+	SpawnNPC(Zombie(),"MAGICTOWER_03_MOVEMENT", world); 
+	SpawnNPC(Zombie2(),"MAGICTOWER_03_MOVEMENT", world); 
+
+	SpawnNPC(Zombie3(),"MAGICTOWER_03_MOVEMENT_2", world); 
+	SpawnNPC(Zombie4(),"MAGICTOWER_03_MOVEMENT_2", world); 
+
+	SpawnNPC(Zombie(),"MAGICTOWER_04", world); 
+	SpawnNPC(Zombie2(),"MAGICTOWER_04", world); 
+	SpawnNPC(Zombie3(),"MAGICTOWER_04", world); 
+	SpawnNPC(Zombie4(),"MAGICTOWER_04", world); 
+
+	SpawnNPC(Zombie(),"MAGICTOWER_06", world); 
+	SpawnNPC(Zombie2(),"MAGICTOWER_06", world); 
+	SpawnNPC(Zombie3(),"MAGICTOWER_06", world); 
+	SpawnNPC(Zombie4(),"MAGICTOWER_06", world); 
+
+	
+	
+	
+	
+	
+end
+
+function InitNewWorldNPC()
+AI_WayNets["KHORINIS.ZEN"] = WayNet.create();
+AI_FreePoints["KHORINIS.ZEN"] = FreePointList.create();
+AI_WayNets["KHORINIS.ZEN"]:load("scripts/wps/KHORINIS.wp");
+AI_FreePoints["KHORINIS.ZEN"]:load("scripts/wps/KHORINIS.fp");
+local world = "KHORINIS.ZEN";
+
+SpawnNPC(Posluh(), "NW_MONASTERY_ENTRY_01", world);
+--SpawnNPC(Waran(), "FP_ROAM_INSEL_01", world);--2866
+--SpawnNPC(Waran(), "FP_ROAM_INSEL_03", world);--
+SpawnNPC(Waran(), "FP_ROAM_INSEL_05", world);--
+SpawnNPC(Waran(), "FP_ROAM_INSEL_07", world);--
+SpawnNPC(Waran(), "FP_ROAM_INSEL_09", world);--
+SpawnNPC(Waran(), "FP_ROAM_INSEL_11", world);--
+SpawnNPC(Waran(), "FP_ROAM_INSEL_13", world);--2874
+
+
+-----Schafherde---3032
+--SpawnNPC(Hammel(), "NW_FARM1_PATH_CITY_SHEEP_07", world);
+--SpawnNPC(Sheep(), "NW_FARM1_PATH_CITY_SHEEP_07", world);
+--SpawnNPC(Sheep(), "NW_FARM1_PATH_CITY_SHEEP_07", world);
+--SpawnNPC(Hammel(), "NW_FARM1_PATH_CITY_SHEEP_08", world);
+--SpawnNPC(Sheep(), "NW_FARM1_PATH_CITY_SHEEP_08", world);
+SpawnNPC(Sheep(), "NW_FARM1_PATH_CITY_SHEEP_08", world);
+SpawnNPC(Sheep(), "NW_FARM1_PATH_CITY_SHEEP_09", world);
+SpawnNPC(Sheep(), "NW_FARM1_PATH_CITY_SHEEP_09", world);
+SpawnNPC(Sheep(), "NW_FARM1_PATH_CITY_SHEEP_09", world);
+-----Schafe auf dem Hof---
+--SpawnNPC(Hammel(), "NW_FARM1_PATH_CITY_SHEEP_10", world);
+--SpawnNPC(Sheep(), "NW_FARM1_PATH_CITY_SHEEP_10", world);
+--SpawnNPC(Hammel(), "NW_FARM1_PATH_CITY_SHEEP_11", world);
+--SpawnNPC(Sheep(), "NW_FARM1_PATH_CITY_SHEEP_11", world);
+--SpawnNPC(Sheep(), "NW_FARM1_PATH_CITY_SHEEP_12", world);
+--SpawnNPC(Sheep(), "NW_FARM1_PATH_CITY_SHEEP_12", world);
+SpawnNPC(Sheep(), "NW_FARM1_OUT_03", world);
+SpawnNPC(Sheep(), "NW_FARM1_OUT_03", world);
+-----Schafe bei der Windmьhle---
+SpawnNPC(Sheep(), "NW_FARM1_MILL_01", world);
+SpawnNPC(Sheep(), "NW_FARM1_MILL_01", world);
+--SpawnNPC(Sheep(), "NW_FARM1_MILL_01", world);
+-----Monster zur Stadt---
+--SpawnNPC(YoungBloodfly(), "NW_FARM1_PATH_SPAWN_02", world);
+--SpawnNPC(YoungBloodfly(), "NW_FARM1_PATH_SPAWN_02", world);
+SpawnNPC(YoungBloodfly(), "NW_FARM1_PATH_SPAWN_02", world);
+SpawnNPC(YoungWolf(),"NW_FARM1_PATH_SPAWN_07", world);
+SpawnNPC(YoungWolf(), "NW_FARM1_PATH_SPAWN_07", world);
+SpawnNPC(YoungGobbo_Green(),"NW_FARM1_PATH_CITY_19_B", world);
+--SpawnNPC(YoungBloodfly(), "NW_FARM1_PATH_CITY_10_B", world);
+SpawnNPC(YoungBloodfly(), "NW_FARM1_PATH_CITY_10_B", world);
+SpawnNPC(YoungWolf(),"NW_FARM1_PATH_CITY_05_B", world);
+SpawnNPC(YoungWolf(),"NW_FARM1_PATH_CITY_05_B", world);
+-----GIANT BUGS---
+SpawnNPC(YoungGiant_Bug(), "NW_FARM1_CITYWALL_RIGHT_02", world);
+--SpawnNPC(YoungGiant_Bug(), "NW_FARM1_OUT_13", world);
+-----Stonehendge ---
+--SpawnNPC(YoungGiant_Bug(), "NW_FARM1_OUT_15", world);
+--SpawnNPC(YoungGiant_Bug(), "NW_FARM1_OUT_15", world);
+-----Kapitel2 Waldgraben---
+SpawnNPC(Bloodfly(),"NW_FARM1_CITYWALL_02_B", world); 
+SpawnNPC(Bloodfly(),"NW_FARM1_CITYWALL_02_B", world);
+--SpawnNPC(Snapper(), "NW_FARM1_CITYWALL_05", world);
+--SpawnNPC(Snapper(), "NW_FARM1_CITYWALL_05", world);
+SpawnNPC(Snapper(), "NW_FARM1_CITYWALL_05", world);
+SpawnNPC(Wolf(), "NW_FARM1_CITYWALL_FOREST_03", world);
+--SpawnNPC(Wolf(), "NW_FARM1_CITYWALL_FOREST_03", world);
+--SpawnNPC(Wolf(), "NW_FARM1_CITYWALL_FOREST_03", world);
+SpawnNPC(Shadowbeast(), "NW_FARM1_CITYWALL_FOREST_04_B", world);
+SpawnNPC(Bloodfly(),"NW_FARM1_CITYWALL_FOREST_06", world);
+SpawnNPC(Bloodfly(),"NW_FARM1_CITYWALL_FOREST_06", world);
+--SpawnNPC(Bloodfly(),"NW_FARM1_CITYWALL_FOREST_06", world);
+--SpawnNPC(Bloodfly(),"NW_FARM1_CITYWALL_FOREST_06", world);
+--SpawnNPC(Bloodfly(),"NW_FARM1_CITYWALL_FOREST_06", world);
+SpawnNPC(OrcWarrior(), "NW_FARM1_CITYWALL_FOREST_08_B", world);
+SpawnNPC(Gobbo_Black(), "NW_FARM1_CITYWALL_FOREST_14", world);
+--SpawnNPC(Gobbo_Black(), "NW_FARM1_CITYWALL_FOREST_14", world);
+--SpawnNPC(Gobbo_Black(),"NW_FARM1_CITYWALL_FOREST_15", world);
+--SpawnNPC(Gobbo_Black(), "NW_FARM1_CITYWALL_FOREST_15", world);
+--SpawnNPC(Gobbo_Black(), "NW_FARM1_CITYWALL_FOREST_16", world);--3112
+-----Monster auf dem Weg zu Farm1--- 3168
+SpawnNPC(Sheep(), "NW_XARDAS_TOWER_04", world);
+--SpawnNPC(YoungWolf(), "NW_XARDAS_PATH_FARM1_11", world);
+--SpawnNPC(YoungGobbo_Green(),"NW_XARDAS_GOBBO_01", world);
+SpawnNPC(YoungGobbo_Green(),"NW_XARDAS_GOBBO_02", world);
+SpawnNPC(YoungWolf(), "NW_XARDAS_MONSTER_INSERT_01", world);
+-----Xardas Secret---
+--SpawnNPC(Keiler(),"FP_ROAM_XARDAS_SECRET_23", world);
+SpawnNPC(Keiler(),"FP_ROAM_XARDAS_SECRET_23", world);
+--SpawnNPC(Waran(),"FP_ROAM_XARDAS_SECRET_08", world);
+--SpawnNPC(Waran(),"FP_ROAM_XARDAS_SECRET_08", world);
+--SpawnNPC(Waran(),"FP_ROAM_XARDAS_SECRET_15", world);
+--SpawnNPC(Waran(),"FP_ROAM_XARDAS_SECRET_15", world);
+SpawnNPC(Waran(),"FP_ROAM_XARDAS_SECRET_04", world);
+SpawnNPC(Waran(),"FP_ROAM_XARDAS_SECRET_04", world);
+SpawnNPC(GiantRat(),"FP_ROAM_XARDAS_SECRET_27", world);
+--SpawnNPC(GiantRat(),"FP_ROAM_XARDAS_SECRET_27", world);
+--SpawnNPC(Meatbug(),"FP_ROAM_XARDAS_SECRET_01", world);
+SpawnNPC(Meatbug(),"FP_ROAM_XARDAS_SECRET_01", world);
+-----Hцhlengang---
+--SpawnNPC(YoungGobbo_Green(),"NW_XARDAS_TOWER_WATERFALL_CAVE_03", world);
+--SpawnNPC(YoungGobbo_Green(),"NW_XARDAS_TOWER_WATERFALL_CAVE_ENTRANCE_02", world);
+--SpawnNPC(YoungGobbo_Green(),"NW_XARDAS_TOWER_WATERFALL_CAVE_ENTRANCE_05", world);
+SpawnNPC(YoungGobbo_Green(),"NW_XARDAS_TOWER_WATERFALL_CAVE_ENTRANCE_05", world);
+SpawnNPC(YoungGobbo_Green(),"NW_XARDAS_TOWER_WATERFALL_CAVE_ENTRANCE_GOBBO", world);
+SpawnNPC(YoungGiant_Bug(), "NW_XARDAS_TOWER_WATERFALL_CAVE_SIDE_02", world); 
+SpawnNPC(YoungGiant_Bug(), "NW_XARDAS_TOWER_WATERFALL_CAVE_SIDE_02", world);
+-----im Tal---
+--SpawnNPC(YoungWolf(), "NW_XARDAS_VALLEY_03", world); 
+--SpawnNPC(YoungWolf(), "NW_XARDAS_VALLEY_04", world);  
+SpawnNPC(YoungWolf(), "NW_XARDAS_VALLEY_06", world); 
+SpawnNPC(YoungWolf(), "NW_XARDAS_VALLEY_08", world); 
+--SpawnNPC(YoungGiantRat(), "NW_XARDAS_TOWER_VALLEY_RAT", world); 
+SpawnNPC(YoungWolf(), "NW_XARDAS_TOWER_VALLEY_WOLF", world);
+SpawnNPC(YoungBloodfly(), "NW_XARDAS_TOWER_VALLEY_08", world);
+-----kleine Hцhle im Tal---
+SpawnNPC(YoungGiantRat(), "NW_XARDAS_TOWER_SECRET_CAVE_01", world); 
+--SpawnNPC(YoungGiantRat(), "NW_XARDAS_TOWER_SECRET_CAVE_01", world);
+--SpawnNPC(YoungGiantRat(), "NW_XARDAS_TOWER_SECRET_CAVE_01", world);
+SpawnNPC(YoungGiantRat(), "NW_XARDAS_TOWER_SECRET_CAVE_03", world);--3223
+-- KLOSTER 
+--SpawnNPC(Sheep(), "FP_ROAM_MONASTERY_01", world);--3277
+SpawnNPC(Sheep(), "FP_ROAM_MONASTERY_02", world);
+SpawnNPC(Sheep(), "FP_ROAM_MONASTERY_03", world);
+--SpawnNPC(Scavenger(), "NW_PATH_TO_MONASTER_AREA_11", world);
+--SpawnNPC(Scavenger(), "NW_PATH_TO_MONASTER_AREA_11", world);
+--SpawnNPC(Scavenger(), "NW_PATH_TO_MONASTER_MONSTER22", world);
+--SpawnNPC(Scavenger(), "NW_PATH_TO_MONASTER_AREA_01", world);
+SpawnNPC(GiantRat(), "NW_PATH_TO_MONASTER_AREA_02", world);
+SpawnNPC(GiantRat(), "NW_PATH_TO_MONASTER_AREA_10", world);
+SpawnNPC(GiantRat(), "NW_PATH_TO_MONASTER_AREA_10", world);
+--SpawnNPC(Giant_Bug(), "NW_PATH_TO_MONASTER_AREA_08", world);
+SpawnNPC(GiantRat(), "NW_SHRINE_MONSTER", world);
+SpawnNPC(Scavenger(), "NW_FOREST_CONNECT_MONSTER2", world);--3299
+
+--3341
+-- ------ Feldrдuberhцhle ------
+--3 rausgenommen, wegen Fester-> werden spдter insertet
+SpawnNPC(Giant_Bug(), "NW_BIGFARM_FELDREUBER", world); 
+SpawnNPC(Giant_Bug(), "NW_BIGFARM_FELDREUBER2", world);
+--SpawnNPC(Giant_Bug(), "NW_BIGFARM_FELDREUBER4", world);
+--SpawnNPC(Giant_Bug(), "FP_ROAM_MONSTERMILL_11", world);
+--SpawnNPC(Giant_Bug(), "FP_ROAM_MONSTERMILL_13", world);
+--SpawnNPC(Giant_Bug(), "FP_ROAM_MONSTERMILL_04", world);
+SpawnNPC(Giant_Bug(), "FP_ROAM_MONSTERMILL_03", world);
+
+--BIGMILL Felder
+--SpawnNPC(Lurker(), "NW_BIGMILL_FIELD_MONSTER_03", world);
+--SpawnNPC(Lurker(), "NW_BIGMILL_FIELD_MONSTER_03", world);
+SpawnNPC(Giant_Bug(), "NW_BIGMILL_FIELD_MONSTER_01", world);
+SpawnNPC(Giant_Bug(), "NW_BIGMILL_FIELD_MONSTER_01", world);
+SpawnNPC(Giant_Bug(), "NW_BIGMILL_FIELD_MONSTER_01", world);
+--SpawnNPC(Giant_Bug(), "NW_BIGMILL_FIELD_MONSTER_02", world);
+--SpawnNPC(Giant_Bug(), "NW_BIGMILL_FIELD_MONSTER_02", world);
+--SpawnNPC(Giant_Bug(), "NW_BIGMILL_FIELD_MONSTER_02", world);
+--2 Bugs rausgenommen, wegen Fester
+SpawnNPC(Giant_Bug(), "NW_BIGFARM_FIELD_MONSTER_01", world);
+SpawnNPC(Giant_Bug(), "NW_BIGFARM_FIELD_MONSTER_01", world);
+--SpawnNPC(Giant_Bug(), "NW_BIGFARM_FIELD_MONSTER_01", world);--3373
+
+SpawnNPC(Sheep(), "NW_BIGFARM_SHEEP1_01", world);--3428
+--SpawnNPC(Sheep(), "NW_BIGFARM_SHEEP1_01", world);
+SpawnNPC(Hammel(), "NW_BIGFARM_SHEEP1_01", world);
+SpawnNPC(Sheep(), "NW_BIGFARM_SHEEP1_02", world);
+--SpawnNPC(Sheep(), "NW_BIGFARM_SHEEP1_02", world);
+--SpawnNPC(Sheep(), "NW_BIGFARM_SHEEP1_02", world);
+SpawnNPC(Hammel(), "NW_BIGFARM_SHEEP1_03", world);
+--SpawnNPC(Sheep(), "NW_BIGFARM_SHEEP1_03", world);
+--SpawnNPC(Sheep(), "NW_BIGFARM_SHEEP1_03", world);
+--SpawnNPC(Sheep(), "FP_ROAM_NW_BIGFARM_SHEEP2_12", world);
+--SpawnNPC(Sheep(), "FP_ROAM_NW_BIGFARM_SHEEP2_13", world);
+--SpawnNPC(Sheep(), "FP_ROAM_NW_BIGFARM_SHEEP2_14", world);
+--SpawnNPC(Sheep(), "FP_ROAM_NW_BIGFARM_SHEEP2_07", world);
+--SpawnNPC(Sheep(), "FP_ROAM_NW_BIGFARM_SHEEP2_08", world);
+SpawnNPC(Sheep(), "FP_ROAM_NW_BIGFARM_SHEEP2_09", world);
+SpawnNPC(Hammel(), "NW_BIGFARM_SHEEP2_02", world);
+--SpawnNPC(Sheep(), "NW_BIGFARM_SHEEP2_02", world);
+--SpawnNPC(Hammel(), "NW_BIGFARM_SHEEP2_03", world);
+SpawnNPC(Hammel(), "NW_BIGFARM_SHEEP2_03", world);
+SpawnNPC(Sheep(), "NW_BIGFARM_SHEEP2_03", world);
+--SpawnNPC(Sheep(), "NW_BIGFARM_SHEEP2_04", world);
+--SpawnNPC(Sheep(), "NW_BIGFARM_SHEEP2_04", world);
+--SpawnNPC(Sheep(), "NW_BIGFARM_KITCHEN_OUT_02", world);
+--SpawnNPC(Sheep(), "NW_BIGFARM_KITCHEN_OUT_02", world);
+--SpawnNPC(Hammel(), "NW_BIGFARM_KITCHEN_OUT_02", world);--3461
+
+SpawnNPC(Snapper(), "NW_FARM3_BIGWOOD_04", world);  --3470
+--SpawnNPC(Sheep(), "FP_ROAM_NW_FARM3_OUT_05_01", world);--3481
+--SpawnNPC(Sheep(), "FP_ROAM_NW_FARM3_OUT_05_02", world);
+--SpawnNPC(Hammel(), "FP_ROAM_NW_FARM3_OUT_05_03", world);
+--SpawnNPC(Sheep(), "FP_ROAM_NW_FARM3_OUT_05_04", world);--3484
+
+--Farm4
+--SpawnNPC(Sheep(), "NW_FARM4_BALTHASAR", world);--3493
+--SpawnNPC(Sheep(), "NW_FARM4_BALTHASAR", world);
+SpawnNPC(Sheep(), "NW_FARM4_BALTHASAR", world);--3495
+
+-- Monster 3507
+--***************************************************************************************
+SpawnNPC(Scavenger(),"NW_TAVERNE_TROLLAREA_MONSTER_01_01", world); 
+SpawnNPC(Zombie2(),"NW_FARM2_TAVERNCAVE1_09", world); 
+SpawnNPC(Zombie3(),"NW_FARM2_TAVERNCAVE1_10", world); 
+SpawnNPC(Zombie4(),"NW_FARM2_TAVERNCAVE1_08", world); 
+SpawnNPC(Gobbo_Skeleton(),"NW_FARM2_TAVERNCAVE1_02", world); 
+--SpawnNPC(Gobbo_Skeleton(),"NW_FARM2_TAVERNCAVE1_02", world); 
+--SpawnNPC(Gobbo_Skeleton(),"NW_FARM2_TAVERNCAVE1_02", world); 
+SpawnNPC(Wolf(),"NW_TAVERNE_TROLLAREA_MONSTER_04_01", world); 
+--SpawnNPC(Wolf(),"NW_TAVERNE_TROLLAREA_MONSTER_04_01", world); 
+SpawnNPC(Gobbo_Green(),"NW_TAVERNE_TROLLAREA_MONSTER_05_01", world); 
+--SpawnNPC(Gobbo_Green(),"NW_TAVERNE_TROLLAREA_MONSTER_05_01", world); 
+SpawnNPC(Gobbo_Green(),"NW_TAVERNE_TROLLAREA_MONSTER_05_01", world); 
+--SpawnNPC(Wolf(),"NW_BIGFARM_LAKE_MONSTER_01_01", world); 
+SpawnNPC(Wolf(),"NW_BIGFARM_LAKE_MONSTER_01_01", world); 
+SpawnNPC(Lurker(),"NW_BIGFARM_LAKE_MONSTER_02_01", world); 
+SpawnNPC(Lurker(),"NW_BIGFARM_LAKE_MONSTER_02_01", world); 
+SpawnNPC(Bloodfly(),"NW_BIGFARM_LAKE_MONSTER_02_01", world); 
+SpawnNPC(Wolf(),"NW_BIGFARM_LAKE_MONSTER_03_01", world); 
+--SpawnNPC(Wolf(),"NW_BIGFARM_LAKE_MONSTER_03_01", world); 
+SpawnNPC(Lurker(),"NW_LAKE_GREG_TREASURE_01", world); --3538
+
+
+-- Kap3 3549
+--SpawnNPC(Warg(),"NW_FARM4_WOOD_MONSTER_01", world); 
+SpawnNPC(Warg(),"NW_FARM4_WOOD_MONSTER_01", world); 
+--SpawnNPC(Bloodfly(),"NW_FARM4_WOOD_MONSTER_02", world); 
+--SpawnNPC(Bloodfly(),"NW_FARM4_WOOD_MONSTER_02", world); 
+SpawnNPC(Bloodfly(),"NW_FARM4_WOOD_MONSTER_02", world); 
+SpawnNPC(Bloodfly(),"NW_FARM4_WOOD_MONSTER_02", world); 
+SpawnNPC(Wolf(),"NW_FARM4_WOOD_MONSTER_03", world); 
+SpawnNPC(Wolf(),"NW_FARM4_WOOD_MONSTER_03", world); 
+--SpawnNPC(Gobbo_Skeleton(),"NW_FARM4_WOOD_MONSTER_04", world); 
+SpawnNPC(Gobbo_Skeleton(),"NW_FARM4_WOOD_MONSTER_04", world); 
+SpawnNPC(Wolf(),"NW_FARM4_WOOD_MONSTER_05", world); 
+--SpawnNPC(Bloodfly(),"NW_FARM4_WOOD_MONSTER_06", world); 
+--SpawnNPC(Bloodfly(),"NW_FARM4_WOOD_MONSTER_06", world); 
+--SpawnNPC(Bloodfly(),"NW_FARM4_WOOD_MONSTER_07", world); 
+SpawnNPC(Bloodfly(),"NW_FARM4_WOOD_MONSTER_07", world); 
+SpawnNPC(Shadowbeast(),"NW_FARM4_WOOD_MONSTER_08", world); 
+SpawnNPC(Gobbo_Skeleton(),"NW_FARM4_WOOD_MONSTER_09", world); 
+--SpawnNPC(Bloodfly(),"NW_FARM4_WOOD_MONSTER_10", world); 
+--SpawnNPC(Bloodfly(),"NW_FARM4_WOOD_MONSTER_10", world); 
+SpawnNPC(Bloodfly(),"NW_FARM4_WOOD_MONSTER_10", world); 
+ 
+  -- Crypt 
+SpawnNPC(Skeleton(), "EVT_CRYPT_ROOM_01_SPAWNMAIN", world);
+SpawnNPC(Skeleton(), "EVT_CRYPT_ROOM_02_SPAWNMAIN", world);
+SpawnNPC(Skeleton(), "EVT_CRYPT_ROOM_03_SPAWNMAIN", world);--3584
+SpawnNPC(Troll(), "NW_CASTLEMINE_TROLL_08", world);--3623
+SpawnNPC(Troll(), "NW_CASTLEMINE_TROLL_07", world);--3624
+
+--3627
+--SpawnNPC(Skeleton(), "FP_ROAM_CASTLEMINE2_01", world);
+--SpawnNPC(Skeleton(), "FP_ROAM_CASTLEMINE2_02", world);
+--SpawnNPC(Skeleton(), "FP_ROAM_CASTLEMINE2_03", world);
+--SpawnNPC(Skeleton(), "FP_ROAM_CASTLEMINE2_04", world);
+SpawnNPC(Skeleton(), "FP_ROAM_CASTLEMINE2_05", world);
+SpawnNPC(Skeleton(), "FP_ROAM_CASTLEMINE2_06", world);
+SpawnNPC(Skeleton(), "FP_ROAM_CASTLEMINE2_07", world);
+SpawnNPC(SkeletonMage(), "FP_ROAM_CASTLEMINE2_08", world);
+SpawnNPC(Zombie1(), "FP_ROAM_CASTLEMINE2_09", world);
+SpawnNPC(Zombie2(), "FP_ROAM_CASTLEMINE2_10", world);
+SpawnNPC(Zombie3(), "FP_ROAM_CASTLEMINE2_11", world);
+SpawnNPC(Zombie4(), "FP_ROAM_CASTLEMINE2_12", world);
+--SpawnNPC(Zombie1(), "FP_ROAM_CASTLEMINE2_13", world);
+--SpawnNPC(Minecrawler(), "NW_CASTLEMINE_13", world);
+--SpawnNPC(MinecrawlerWarrior(), "NW_CASTLEMINE_10", world);
+--SpawnNPC(Minecrawler(), "NW_CASTLEMINE_12", world);
+--SpawnNPC(MinecrawlerWarrior(), "NW_CASTLEMINE_06", world);
+SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_BIGFARMFORESTCAVE_01", world);
+SpawnNPC(Gobbo_Warrior(), "FP_ROAM_NW_BIGFARMFORESTCAVE_02", world);
+--SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_BIGFARMFORESTCAVE_03", world);
+--SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_BIGFARMFORESTCAVE_04", world);
+SpawnNPC(Gobbo_Green(), "FP_ROAM_BIGFARM_LAKE_CAVE_02", world);
+--SpawnNPC(Gobbo_Black(), "FP_ROAM_BIGFARM_LAKE_CAVE_07", world);
+SpawnNPC(Gobbo_Green(), "FP_ROAM_BIGFARM_LAKE_CAVE_08", world);
+--SpawnNPC(Gobbo_Green(), "FP_ROAM_BIGFARM_LAKE_CAVE_09", world);
+SpawnNPC(Gobbo_Green(), "FP_ROAM_BIGFARM_LAKE_CAVE_10", world);
+--SpawnNPC(Gobbo_Black(), "FP_ROAM_BIGFARM_LAKE_CAVE_11", world);
+--SpawnNPC(Gobbo_Green(), "FP_ROAM_BIGFARM_LAKE_CAVE_12", world);
+SpawnNPC(Gobbo_Green(), "FP_ROAM_BIGFARM_LAKE_CAVE_13", world);
+--SpawnNPC(Gobbo_Green(), "FP_ROAM_NW_BIGFARMFORESTCAVE_05", world);
+--SpawnNPC(Gobbo_Green(), "FP_ROAM_NW_BIGFARMFORESTCAVE_06", world);
+--SpawnNPC(Gobbo_Green(), "FP_ROAM_NW_BIGFARMFORESTCAVE_07", world);
+--SpawnNPC(Gobbo_Green(), "FP_ROAM_NW_BIGFARMFORESTCAVE_08", world);
+--SpawnNPC(Gobbo_Green(), "FP_ROAM_NW_BIGFARMFORESTCAVE_09", world);
+--SpawnNPC(Gobbo_Green(), "FP_ROAM_NW_BIGFARMFORESTCAVE_10", world);
+SpawnNPC(Gobbo_Green(), "FP_ROAM_BIGFARM_LAKE_CAVE_01", world);
+SpawnNPC(Gobbo_Black(), "FP_ROAM_BIGFARM_LAKE_CAVE_02", world);
+SpawnNPC(Gobbo_Green(), "FP_ROAM_BIGFARM_LAKE_CAVE_03", world);
+SpawnNPC(Gobbo_Green(), "FP_ROAM_BIGFARM_LAKE_CAVE_04", world);
+SpawnNPC(Gobbo_Green(), "FP_ROAM_BIGFARM_LAKE_CAVE_05", world);
+SpawnNPC(Gobbo_Green(), "FP_ROAM_BIGFARM_LAKE_CAVE_06", world);
+--andere
+--SpawnNPC(Bloodfly(), "NW_BIGFARM_LAKE_MONSTER_BLOODFLY", world);
+--SpawnNPC(Bloodfly(), "NW_BIGFARM_LAKE_MONSTER_BLOODFLY", world);
+SpawnNPC(Bloodfly(), "NW_BIGFARM_LAKE_MONSTER_BLOODFLY", world);
+--SpawnNPC(Giant_Bug(), "NW_TAVERNE_TROLLAREA_MONSTER_03_01M1", world);
+--SpawnNPC(Giant_Bug(), "NW_TAVERNE_TROLLAREA_MONSTER_03_01M1", world);
+--SpawnNPC(Wolf(), "NW_SAGITTA_MOREMONSTER_01", world);
+SpawnNPC(Wolf(), "NW_SAGITTA_MOREMONSTER_01", world);
+SpawnNPC(Wolf(), "NW_SAGITTA_MOREMONSTER_01", world);
+--SpawnNPC(Giant_Bug(), "NW_SAGITTA_MOREMONSTER_03", world);
+SpawnNPC(Giant_Bug(), "NW_SAGITTA_MOREMONSTER_03", world);
+--SpawnNPC(Bloodfly(), "NW_FARM4_WOOD_NEARPEASANT7", world);
+--SpawnNPC(Bloodfly(), "NW_FARM4_WOOD_NEARPEASANT7", world);
+--SpawnNPC(Bloodfly(), "NW_FARM4_WOOD_NEARPEASANT2_14", world);
+--SpawnNPC(Bloodfly(), "NW_FARM4_WOOD_NEARPEASANT2_14", world);
+SpawnNPC(Bloodfly(), "NW_FARM4_WOOD_NEARPEASANT2_14", world);
+SpawnNPC(Bloodfly(), "NW_FARM4_WOOD_NEARPEASANT2_10", world);
+SpawnNPC(Bloodfly(), "NW_FARM4_WOOD_NEARPEASANT2_10", world);
+SpawnNPC(Wolf(), "NW_FARM4_WOOD_NEARPEASANT2_8", world);
+SpawnNPC(Wolf(), "NW_FARM4_WOOD_NEARPEASANT2_8", world);
+--SpawnNPC(Scavenger(), "NW_FARM4_WOOD_NEARPEASANT2_7", world);
+SpawnNPC(Scavenger(), "NW_FARM4_WOOD_NEARPEASANT2_7", world);
+SpawnNPC(Scavenger(), "NW_FARM4_WOOD_NEARPEASANT2_7", world);
+--SpawnNPC(Giant_Bug(), "NW_FARM4_WOOD_NEARPEASANT2_12", world);
+--SpawnNPC(Giant_Bug(), "NW_FARM4_WOOD_NEARPEASANT2_12", world);
+SpawnNPC(Gobbo_Skeleton(), "NW_FARM4_WOOD_MONSTER_MORE_02", world);
+SpawnNPC(Gobbo_Skeleton(), "NW_FARM4_WOOD_MONSTER_MORE_02", world);
+--SpawnNPC(Giant_Bug(), "NW_FARM4_WOOD_MONSTER_MORE_01", world);
+--SpawnNPC(Giant_Bug(), "NW_FARM4_WOOD_MONSTER_N_3", world);
+--SpawnNPC(Giant_Bug(), "NW_FARM4_WOOD_MONSTER_N_3", world);
+--SpawnNPC(Giant_Bug(), "NW_FARM4_WOOD_MONSTER_N_2", world);
+SpawnNPC(Giant_Bug(), "NW_FARM4_WOOD_MONSTER_N_2", world);
+SpawnNPC(Giant_Bug(), "NW_BIGFARM_FOREST_02", world);
+SpawnNPC(Giant_Bug(), "NW_BIGFARM_FOREST_02", world);
+--SpawnNPC(Gobbo_Skeleton(), "NW_CRYPT_MONSTER08", world);
+--SpawnNPC(Gobbo_Skeleton(), "NW_CRYPT_MONSTER08", world);
+--SpawnNPC(Gobbo_Skeleton(), "NW_CRYPT_MONSTER02", world);
+SpawnNPC(Gobbo_Skeleton(), "NW_CRYPT_MONSTER02", world);
+SpawnNPC(Gobbo_Skeleton(), "NW_CRYPT_MONSTER02", world);
+SpawnNPC(Lesser_Skeleton(), "NW_CRYPT_MONSTER04", world);
+SpawnNPC(Skeleton(), "NW_CRYPT_MONSTER04", world);
+--SpawnNPC(Lesser_Skeleton(), "NW_CRYPT_MONSTER04", world);
+--SpawnNPC(Lesser_Skeleton(), "NW_CRYPT_MONSTER06", world);
+SpawnNPC(Lesser_Skeleton(), "NW_CRYPT_MONSTER06", world);
+SpawnNPC(Wisp(), "NW_BIGFARM_FOREST_03_NAVIGATION", world);
+SpawnNPC(Keiler(), "NW_BIGFARM_FOREST_03_NAVIGATION", world);
+--SpawnNPC(Keiler(), "NW_FARM4_WOOD_NAVIGATION_09", world);
+SpawnNPC(Keiler(), "NW_FARM4_WOOD_NAVIGATION_09", world);
+SpawnNPC(Wolf(), "NW_CASTLEMINE_TROLL_05", world);
+SpawnNPC(Wolf(), "NW_CASTLEMINE_TROLL_05", world);
+--SpawnNPC(Giant_Bug(), "NW_BIGFARM_ALLEE_08_N", world);
+--SpawnNPC(Giant_Bug(), "NW_BIGFARM_ALLEE_08_N_2", world);
+--SpawnNPC(Giant_Bug(), "NW_BIGFARM_ALLEE_08_N_2", world);
+--SpawnNPC(Giant_Bug(), "NW_BIGFARM_ALLEE_08_N_5", world);
+SpawnNPC(Giant_Bug(), "NW_BIGFARM_ALLEE_08_N_5", world);
+SpawnNPC(Giant_Bug(), "NW_BIGFARM_ALLEE_08_N_5", world);
+--SpawnNPC(Scavenger(), "NW_BIGMILL_05", world);
+--SpawnNPC(Scavenger(), "NW_BIGMILL_05", world);
+--SpawnNPC(Scavenger(), "NW_BIGMILL_05", world);
+--SpawnNPC(Scavenger(), "NW_BIGMILL_FARM3_03", world);
+SpawnNPC(Scavenger(), "NW_BIGMILL_FARM3_03", world);
+SpawnNPC(Scavenger(), "NW_FARM3_BIGWOOD_02", world);
+SpawnNPC(Scavenger(), "NW_FARM3_BIGWOOD_02", world);
+ 
+ --PATCH M.F. 
+ --SpawnNPC(Keiler(), "NW_FARM3_BIGWOOD_03", world);
+ --SpawnNPC(Keiler(), "NW_FARM3_BIGWOOD_03", world);
+ SpawnNPC(Keiler(), "NW_FARM3_BIGWOOD_03", world);
+ 
+ --SpawnNPC(Lurker(), "NW_FARM3_PATH_11_SMALLRIVER_02", world);
+ --SpawnNPC(Lurker(), "NW_FARM3_PATH_11_SMALLRIVER_02", world);
+ --SpawnNPC(Lurker(), "NW_FARM3_PATH_11_SMALLRIVER_04", world);
+SpawnNPC(Scavenger(), "NW_FARM3_PATH_11_SMALLRIVER_08", world);
+SpawnNPC(Scavenger(), "NW_FARM3_PATH_11_SMALLRIVER_10", world);
+SpawnNPC(Scavenger(), "NW_FARM3_PATH_11_SMALLRIVER_10", world);
+ 
+ --SpawnNPC(Lurker(), "NW_FARM3_PATH_11_SMALLRIVER_17", world);
+ --SpawnNPC(Lurker(), "NW_FARM3_PATH_11_SMALLRIVER_17", world);
+ SpawnNPC(Lurker(), "NW_FARM3_PATH_11_SMALLRIVER_20", world);
+ --SpawnNPC(Bloodfly(), "NW_FARM3_PATH_11_SMALLRIVER_24", world);
+ SpawnNPC(Bloodfly(), "NW_FARM3_PATH_11_SMALLRIVER_24", world);
+ SpawnNPC(Lurker(), "NW_FARM3_PATH_11_SMALLRIVERMID_03", world);
+ --SpawnNPC(Lurker(), "NW_FARM3_PATH_11_SMALLRIVERMID_02", world);
+ --SpawnNPC(Lurker(), "NW_FARM3_PATH_11_SMALLRIVERMID_03", world);
+ SpawnNPC(Keiler(), "NW_FARM3_PATH_12_MONSTER_01", world);
+ --SpawnNPC(Keiler(), "NW_FARM3_PATH_12_MONSTER_01", world);
+--SpawnNPC(Keiler(), "NW_FARM3_PATH_12_MONSTER_03", world);
+ SpawnNPC(Lurker(), "NW_FARM3_MOUNTAINLAKE_03", world);
+ SpawnNPC(Lurker(), "NW_FARM3_MOUNTAINLAKE_MONSTER_01", world);
+ --SpawnNPC(Lurker(), "NW_FARM3_MOUNTAINLAKE_MONSTER_01", world);
+ SpawnNPC(Keiler(), "NW_BIGFARM_LAKE_03_MOVEMENT", world);
+ SpawnNPC(Keiler(), "NW_BIGFARM_LAKE_03_MOVEMENT", world);
+ SpawnNPC(Giant_Bug(), "NW_BIGFARM_LAKE_03_MOVEMENT3", world);
+ --SpawnNPC(Giant_Bug(), "NW_BIGFARM_LAKE_03_MOVEMENT3", world);
+ SpawnNPC(Gobbo_Skeleton(), "NW_BIGFARM_LAKE_03_MOVEMENT5", world);
+ --SpawnNPC(Gobbo_Skeleton(), "NW_BIGFARM_LAKE_03_MOVEMENT5", world);
+--3819
+
+--3936
+
+SpawnNPC(YoungWolf(),"NW_PASS_06", world);
+SpawnNPC(YoungWolf(),"NW_PASS_06", world);
+--SpawnNPC(YoungWolf(),"NW_PASS_11", world);
+--SpawnNPC(YoungWolf(),"NW_PASS_11", world);
+--SpawnNPC(YoungWolf(),"NW_PASS_SECRET_15", world);
+--SpawnNPC(YoungWolf(),"NW_PASS_SECRET_16", world);
+SpawnNPC(YoungWolf(),"NW_PASS_SECRET_16", world);
+SpawnNPC(YoungWolf(),"NW_PASS_SECRET_17", world);
+--SpawnNPC(GiantRat(),"NW_PASS_SECRET_05", world);
+--SpawnNPC(GiantRat(),"NW_PASS_SECRET_06", world);
+SpawnNPC(GiantRat(),"NW_PASS_SECRET_07", world);
+SpawnNPC(GiantRat(),"NW_PASS_SECRET_08", world);
+--SpawnNPC(Gobbo_Green(),"NW_PASS_GRAT_04", world);
+--SpawnNPC(Gobbo_Green(),"NW_PASS_GRAT_05", world);
+--SpawnNPC(Gobbo_Green(),"NW_PASS_GRAT_05", world);
+SpawnNPC(Gobbo_Green(),"NW_PASS_GRAT_06", world);
+SpawnNPC(Gobbo_Green(),"NW_PASS_GRAT_06", world);
+--SpawnNPC(OrcShaman(),"NW_PASS_ORKS_07", world);
+SpawnNPC(OrcShaman(),"NW_PASS_ORKS_02", world);
+--SpawnNPC(OrcShaman(),"NW_PASS_ORKS_02_B", world);
+--SpawnNPC(OrcShaman(),"NW_PASS_ORKS_13", world);
+--SpawnNPC(OrcShaman(),"NW_PASS_ORKS_04_B", world);
+--SpawnNPC(OrcWarrior(),"NW_PASS_13", world);
+SpawnNPC(OrcWarrior(),"NW_PASS_14", world);
+SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_07", world);
+SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_06", world);
+--SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_06", world);
+SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_01", world);
+--SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_01", world);
+--SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_01", world);
+SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_04", world);
+--SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_04", world);
+--SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_04", world);
+--SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_08", world);
+--SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_08", world);
+--SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_03", world);
+--SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_03", world);
+SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_03", world);
+SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_09", world);
+SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_10", world);
+--SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_10", world);
+--SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_11", world);
+SpawnNPC(OrcWarrior(),"NW_PASS_ORKS_12", world);
+
+--3994
+
+
+--SpawnNPC(Sheep(), "NW_FARM2_OUT_02", world);--4031
+SpawnNPC(Sheep(), "NW_FARM2_OUT_02", world);--4032
+
+--4044
+-- Monster
+--SpawnNPC(GiantRat(), "FP_ROAM_MEDIUMFOREST_KAP2_12", world);
+--SpawnNPC(GiantRat(), "FP_ROAM_MEDIUMFOREST_KAP2_10", world);
+SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP2_28", world);
+SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP2_29", world);
+--SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP2_17", world);
+--SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP2_13", world);
+SpawnNPC(Wolf(), "FP_ROAM_MEDIUMFOREST_KAP2_36", world);
+SpawnNPC(Wolf(), "FP_ROAM_MEDIUMFOREST_KAP2_34", world);
+SpawnNPC(Skeleton(), "FP_ROAM_MEDIUMFOREST_KAP3_04", world);
+SpawnNPC(Skeleton(), "FP_ROAM_MEDIUMFOREST_KAP3_05", world);
+SpawnNPC(Zombie1(), "FP_ROAM_MEDIUMFOREST_KAP3_01", world);
+SpawnNPC(Zombie2(), "FP_ROAM_MEDIUMFOREST_KAP3_02", world);
+SpawnNPC(Zombie3(), "FP_ROAM_MEDIUMFOREST_KAP3_03", world);
+SpawnNPC(Warg(), "FP_ROAM_MEDIUMFOREST_KAP3_08", world);
+SpawnNPC(Warg(), "FP_ROAM_MEDIUMFOREST_KAP3_09", world);
+--SpawnNPC(Warg(), "FP_ROAM_MEDIUMFOREST_KAP3_11", world);
+SpawnNPC(Giant_Bug(), "FP_ROAM_MEDIUMFOREST_KAP3_15", world);
+SpawnNPC(Wolf(), "FP_ROAM_MEDIUMFOREST_KAP3_17", world);
+SpawnNPC(Keiler(), "FP_ROAM_MEDIUMFOREST_KAP3_21", world);
+SpawnNPC(Warg(), "FP_ROAM_MEDIUMFOREST_KAP3_23", world);
+--SpawnNPC(Warg(), "FP_ROAM_MEDIUMFOREST_KAP3_28", world);
+--SpawnNPC(Warg(), "FP_ROAM_MEDIUMFOREST_KAP3_29", world);
+SpawnNPC(Shadowbeast(), "FP_ROAM_MEDIUMFOREST_KAP3_20", world);
+SpawnNPC(GiantRat(), "FP_ROAM_MEDIUMFOREST_KAP3_27", world);
+SpawnNPC(GiantRat(), "FP_ROAM_MEDIUMFOREST_KAP3_26", world);
+SpawnNPC(OrcWarrior(), "FP_ROAM_MEDIUMFOREST_KAP3_32", world);
+-- ------- vom Osttor zum Leuchtturm ------
+SpawnNPC(Bloodfly(), "NW_CITY_TO_LIGHTHOUSE_03", world); --mehr FPs
+--SpawnNPC(Bloodfly(), "NW_CITY_TO_LIGHTHOUSE_03", world);
+-- ------- Kьste ------
+SpawnNPC(Waran(), "FP_ROAM_SHIPWRECK_04", world); 
+SpawnNPC(Waran(), "FP_ROAM_SHIPWRECK_01", world); 
+--ADDON SpawnNPC(Waran(),"FP_ROAM_FISHERCOAST_01", world);
+--ADDON SpawnNPC(Waran(),"FP_ROAM_FISHERCOAST_02", world);
+--ADDON: SpawnNPC(GiantRat(), "FP_ROAM_FISHERMAN_01", world);
+SpawnNPC(Waran(), "FP_ROAM_FISHERMAN_04", world);
+--4095
+
+--4100
+SpawnNPC(Wolf(), "NW_CITY_TO_FOREST_05", world);
+SpawnNPC(Wolf(), "NW_CITY_TO_FOREST_07", world);
+SpawnNPC(GiantRat(), "NW_CITY_TO_FOREST_11", world);
+--SpawnNPC(GiantRat(), "NW_CITY_TO_FOREST_12", world);
+SpawnNPC(Gobbo_Green(), "NW_CITY_TO_FOREST_15", world); --FPs fehlen
+SpawnNPC(Wolf(), "FP_ROAM_CITY_TO_FOREST_47", world);
+SpawnNPC(GiantRat(), "FP_ROAM_CITY_TO_FOREST_11", world);
+--SpawnNPC(GiantRat(), "FP_ROAM_CITY_TO_FOREST_10", world);
+--SpawnNPC(GiantRat(), "FP_ROAM_CITYFOREST_KAP3_22", world);
+--SpawnNPC(GiantRat(), "FP_ROAM_CITYFOREST_KAP3_20", world);
+SpawnNPC(GiantRat(), "FP_ROAM_CITYFOREST_KAP3_21", world);
+SpawnNPC(Giant_Bug(), "FP_ROAM_CITYFOREST_KAP3_23", world);
+SpawnNPC(Giant_Bug(), "FP_ROAM_CITYFOREST_KAP3_27", world);
+--SpawnNPC(Giant_Bug(), "FP_ROAM_CITYFOREST_KAP3_28", world);
+--SpawnNPC(Giant_Bug(), "FP_ROAM_CITYFOREST_KAP3_29", world);
+--SpawnNPC(Giant_Bug(), "FP_ROAM_CITYFOREST_KAP3_30", world);
+SpawnNPC(Giant_Bug(), "FP_ROAM_CITYFOREST_KAP3_38", world);
+SpawnNPC(Waran(), "FP_ROAM_CITY_TO_FOREST_32", world);
+SpawnNPC(Waran(), "FP_ROAM_CITY_TO_FOREST_29", world);
+--SpawnNPC(Waran(), "FP_ROAM_CITY_TO_FOREST_31", world);
+SpawnNPC(Molerat(), "FP_ROAM_CITY_TO_FOREST_42", world);
+--SpawnNPC(Molerat(), "FP_ROAM_CITY_TO_FOREST_41", world);
+SpawnNPC(Shadowbeast(), "FP_ROAM_CITYFOREST_KAP3_04", world);
+SpawnNPC(Gobbo_Black(), "FP_ROAM_CITYFOREST_KAP3_07", world);
+SpawnNPC(Gobbo_Black(), "FP_ROAM_CITYFOREST_KAP3_06", world);
+--SpawnNPC(Gobbo_Black(), "FP_ROAM_CITYFOREST_KAP3_08", world);
+--SpawnNPC(Warg(), "FP_ROAM_CITYFOREST_KAP3_09", world);
+--SpawnNPC(Warg(), "FP_ROAM_CITYFOREST_KAP3_10", world);
+--SpawnNPC(Warg(), "FP_ROAM_CITYFOREST_KAP3_11", world);
+--SpawnNPC(Warg(), "FP_ROAM_CITYFOREST_KAP3_12", world);
+SpawnNPC(Warg(), "FP_ROAM_CITYFOREST_KAP3_14", world);
+SpawnNPC(Warg(), "FP_ROAM_CITYFOREST_KAP3_15", world);
+SpawnNPC(Warg(), "FP_ROAM_CITYFOREST_KAP3_17", world);
+-- VINOSKELLEREI
+SpawnNPC(GiantRat(),"NW_FOREST_VINOSKELLEREI_01", world); 
+SpawnNPC(GiantRat(),"NW_FOREST_VINOSKELLEREI_01", world); 
+
+--4145
+
+-- ----------- SMForestCave ------------4154
+SpawnNPC(GiantRat(), "NW_CITY_SMFOREST_05", world);
+--SpawnNPC(Meatbug(), "NW_CITY_SMFOREST_05", world);
+--SpawnNPC(Meatbug(), "NW_CITY_SMFOREST_05", world);
+SpawnNPC(Meatbug(), "NW_CITY_SMFOREST_06", world);
+SpawnNPC(Meatbug(), "NW_CITY_SMFOREST_06", world);
+SpawnNPC(Meatbug(), "NW_CITY_SMFOREST_06", world);--4161
+
+
+--4166
+--SpawnNPC(Meatbug(), "NW_CITY_SMFOREST_08", world);
+--SpawnNPC(Meatbug(), "NW_CITY_SMFOREST_08", world);
+SpawnNPC(Meatbug(), "NW_CITY_SMFOREST_09", world);
+SpawnNPC(Meatbug(), "NW_CITY_SMFOREST_09", world);
+--SpawnNPC(GiantRat(), "NW_CITY_SMFOREST_09", world);
+SpawnNPC(GiantRat(), "NW_CITY_SMFOREST_03", world);
+SpawnNPC(GiantRat(), "NW_CITY_SMFOREST_03", world);
+--SpawnNPC(Meatbug(), "NW_CITY_SMFOREST_01_01", world);
+--SpawnNPC(Meatbug(), "NW_CITY_SMFOREST_01_01", world);
+SpawnNPC(Meatbug(), "NW_CITY_SMFOREST_01_01", world);
+-- ----------- COASTCAVE ------------
+SpawnNPC(Shadowbeast(), "NW_FOREST_PATH_35_06", world);
+-- ----------- City2Cave ------------
+SpawnNPC(OrcWarrior(), "NW_CITY_TO_FOREST_04_08", world);
+SpawnNPC(Wolf(), "NW_CITY_TO_FOREST_04_09", world);
+--SpawnNPC(Meatbug(), "NW_CITY_TO_FOREST_04_05", world);
+--SpawnNPC(Meatbug(), "NW_CITY_TO_FOREST_04_05", world);
+SpawnNPC(Meatbug(), "NW_CITY_TO_FOREST_04_05", world);
+SpawnNPC(Meatbug(), "NW_CITY_TO_FOREST_04_05_01", world);
+SpawnNPC(Meatbug(), "NW_CITY_TO_FOREST_04_05_01", world);
+-- ----------- BridgeCave ------------
+SpawnNPC(Molerat(), "NW_TAVERN_TO_FOREST_05_05", world);
+SpawnNPC(Molerat(), "NW_TAVERN_TO_FOREST_05_06", world);
+-- ----------- ShadowBeastCave ------------
+SpawnNPC(Gobbo_Green(), "NW_CITYFOREST_CAVE_A01", world);
+SpawnNPC(Gobbo_Green(), "NW_CITYFOREST_CAVE_A01", world);
+SpawnNPC(Gobbo_Black(), "NW_CITYFOREST_CAVE_A02", world);
+SpawnNPC(GiantRat(), "NW_CITYFOREST_CAVE_04", world);
+SpawnNPC(GiantRat(), "NW_CITYFOREST_CAVE_04", world);
+SpawnNPC(Molerat(), "NW_CITYFOREST_CAVE_06", world);
+SpawnNPC(Molerat(), "NW_CITYFOREST_CAVE_06", world);
+--SpawnNPC(Molerat(), "NW_CITYFOREST_CAVE_06", world);
+SpawnNPC(Shadowbeast(), "NW_CITYFOREST_CAVE_A06", world);
+-- andere
+--SpawnNPC(GiantRat(), "NW_FARM1_CITYWALL_RIGHT_04", world);
+SpawnNPC(GiantRat(), "NW_FARM1_CITYWALL_RIGHT_04", world);
+--SpawnNPC(Scavenger(), "NW_FOREST_PATH_38_MONSTER", world);
+SpawnNPC(Scavenger(), "NW_FOREST_PATH_38_MONSTER", world);
+SpawnNPC(Keiler(), "NW_CITY_TO_LIGHTHOUSE_13_MONSTER", world);
+SpawnNPC(Wolf(), "NW_FOREST_PATH_35_01", world);
+--SpawnNPC(Wolf(), "NW_FOREST_PATH_35_01", world);
+SpawnNPC(Warg(), "NW_FOREST_PATH_31_MONSTER", world);
+SpawnNPC(Warg(), "NW_FOREST_PATH_31_MONSTER", world);
+SpawnNPC(Molerat(), "NW_FOREST_PATH_21_MONSTER", world);
+SpawnNPC(Molerat(), "NW_FOREST_PATH_21_MONSTER", world);
+--SpawnNPC(Giant_Bug(), "NW_FARM2_TO_TAVERN_09_MONSTER", world);
+--SpawnNPC(Giant_Bug(), "NW_FARM2_TO_TAVERN_09_MONSTER2", world);
+--SpawnNPC(Giant_Bug(), "NW_FARM2_TO_TAVERN_09_MONSTER2", world);
+SpawnNPC(Giant_Bug(), "NW_FARM2_TO_TAVERN_09_MONSTER3", world);
+SpawnNPC(Giant_Bug(), "NW_FARM2_TO_TAVERN_09_MONSTER3", world);
+--SpawnNPC(Molerat(), "NW_FARM2_TO_TAVERN_09_MONSTER4", world);
+SpawnNPC(Molerat(), "NW_FARM2_TO_TAVERN_09_MONSTER4", world);
+SpawnNPC(Molerat(), "NW_FARM2_TO_TAVERN_09_MONSTER4", world);
+--SpawnNPC(Bloodfly(), "NW_FARM2_TO_TAVERN_09_MONSTER5", world);
+SpawnNPC(Bloodfly(), "NW_FARM2_TO_TAVERN_09_MONSTER5", world);
+SpawnNPC(Wolf(), "NW_CITY_TO_FOREST_04", world);
+SpawnNPC(Wolf(), "NW_FOREST_CAVE1_01", world);
+SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_75_2_MONSTER", world);
+--SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_75_2_MONSTER", world);
+--SpawnNPC(Keiler(), "NW_FOREST_PATH_79", world);
+--SpawnNPC(Keiler(), "NW_FOREST_PATH_79", world);
+SpawnNPC(Keiler(), "NW_FOREST_PATH_80_1", world);
+SpawnNPC(Keiler(), "NW_FOREST_PATH_80_1", world);
+--SpawnNPC(Waran(), "NW_FOREST_PATH_82", world);
+--SpawnNPC(Waran(), "NW_FOREST_PATH_82", world);
+--SpawnNPC(Waran(), "NW_FOREST_PATH_82_M", world);
+SpawnNPC(Waran(), "NW_FOREST_PATH_82_M", world);
+SpawnNPC(Wolf(), "NW_FOREST_PATH_66_M", world);
+SpawnNPC(Wolf(), "NW_FOREST_PATH_66_M", world);
+ SpawnNPC(Gobbo_Skeleton(), "NW_FOREST_PATH_62_M", world);
+ SpawnNPC(Gobbo_Skeleton(), "NW_FOREST_PATH_62_M", world);
+ SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_57", world);
+ SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_57", world);
+ SpawnNPC(Bloodfly(), "NW_FOREST_PATH_35_01_MONSTER", world);
+ SpawnNPC(Bloodfly(), "NW_FOREST_PATH_35_01_MONSTER", world);
+ --SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_80_1_MOVEMENT8_M", world);
+ --SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_80_1_MOVEMENT8_M", world);
+ SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_80_1_MOVEMENTF", world);
+ SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_80_1_MOVEMENTF", world);
+ SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_31_NAVIGATION3", world);
+ SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_31_NAVIGATION3", world);
+  --SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_31_NAVIGATION10", world);
+  SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_31_NAVIGATION10", world);
+  SpawnNPC(GiantRat(), "NW_FOREST_PATH_31_NAVIGATION11", world);
+  --SpawnNPC(Snapper(), "NW_FOREST_PATH_80_1_MOVEMENT6", world);
+  --SpawnNPC(Snapper(), "NW_FOREST_PATH_80_1_MOVEMENT6", world);
+  --SpawnNPC(Snapper(), "NW_FOREST_PATH_80_1_MOVEMENT15", world);
+  SpawnNPC(Snapper(), "NW_FOREST_PATH_80_1_MOVEMENT15", world);
+  SpawnNPC(Snapper(), "NW_FOREST_PATH_80_1_MOVEMENT15", world);
+  SpawnNPC(Snapper(), "NW_FOREST_PATH_80_1_MOVEMENT8_M5", world);
+  SpawnNPC(Snapper(), "NW_FOREST_PATH_80_1_MOVEMENT8_M5", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_31_NAVIGATION16", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_31_NAVIGATION16", world);
+  --SpawnNPC(Snapper(), "NW_FOREST_PATH_80_1_MOVEMENT8_M3", world);
+  --SpawnNPC(Snapper(), "NW_FOREST_PATH_80_1_MOVEMENT8_M3", world);
+  SpawnNPC(Snapper(), "NW_FOREST_PATH_80_1_MOVEMENT8_M3", world);
+  --SpawnNPC(Warg(), "NW_FOREST_PATH_04_16_MONSTER", world);
+  --SpawnNPC(Warg(), "NW_FOREST_PATH_04_16_MONSTER", world);
+  --SpawnNPC(Warg(), "NW_FOREST_PATH_04_16_MONSTER", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_04_16_MONSTER2", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_04_16_MONSTER2", world);
+  --SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_04_13", world);
+  --SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_04_13", world);
+  --SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_04_3", world);
+  SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_04_4", world);
+  SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_04_4", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_72_MONSTER", world);
+  SpawnNPC(Bloodfly(), "NW_FOREST_PATH_62_06", world);
+  SpawnNPC(Bloodfly(), "NW_FOREST_PATH_62_06", world);
+  SpawnNPC(Molerat(), "NW_FOREST_PATH_56_MONSTER", world);
+  SpawnNPC(Molerat(), "NW_FOREST_PATH_56_MONSTER", world);
+  SpawnNPC(Bloodfly(), "NW_FOREST_PATH_27_03", world);
+  SpawnNPC(Bloodfly(), "NW_FOREST_PATH_27_03", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_27_02", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_27_02", world);
+  --SpawnNPC(Scavenger(), "NW_CITY_TO_LIGHTHOUSE_13_MONSTER7", world);
+  SpawnNPC(Scavenger(), "NW_CITY_TO_LIGHTHOUSE_13_MONSTER7", world);
+  --SpawnNPC(Bloodfly(), "NW_CITY_TO_LIGHTHOUSE_13_MONSTER8", world);
+  SpawnNPC(Bloodfly(), "NW_CITY_TO_LIGHTHOUSE_13_MONSTER8", world);
+  SpawnNPC(Keiler(), "NW_FOREST_PATH_35_MONSTER", world);
+  SpawnNPC(OrcWarrior(), "NW_FOREST_PATH_31_NAVIGATION_M", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_31_NAVIGATION_M", world);
+  SpawnNPC(OrcWarrior(), "NW_FOREST_PATH_31_NAVIGATION19", world);
+  SpawnNPC(OrcWarrior(), "NW_FOREST_PATH_31_NAVIGATION19", world);
+  SpawnNPC(OrcElite(), "NW_FOREST_PATH_18_MONSTER", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_18_MONSTER", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_72_MONSTER23", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_72_MONSTER23", world);
+  SpawnNPC(Molerat(), "NW_FOREST_PATH_76", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_66_MONSTER", world);
+  SpawnNPC(Warg(), "NW_FOREST_PATH_66_MONSTER", world);
+  SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_04_5", world);
+  SpawnNPC(Giant_Bug(), "NW_FOREST_PATH_04_5", world);
+  --Egill/Enim-FIX
+  --SpawnNPC(Giant_Bug(), "NW_CITY_TO_FARM2_05_MOV5", world);
+  --SpawnNPC(Giant_Bug(), "NW_CITY_TO_FARM2_05_MOV5", world);
+  SpawnNPC(Keiler(), "NW_FOREST_PATH_04_14_MONSTER", world);
+  --SpawnNPC(Keiler(), "NW_FOREST_PATH_04_14_MONSTER", world);
+   --SpawnNPC(Molerat(), "NW_CITY_SMFOREST_03_M", world);
+   --SpawnNPC(Molerat(), "NW_CITY_SMFOREST_03_M", world);
+   SpawnNPC(Molerat(), "NW_FOREST_PATH_25_01_M", world);
+   SpawnNPC(Molerat(), "NW_FOREST_PATH_25_01_M", world);
+--4376
+
+--4423
+------- Magierhцhle -----
+--/*
+--SpawnNPC(Skeleton(), "NW_MAGECAVE_SKELETON", world);
+--SpawnNPC(Lesser_Skeleton(), "NW_MAGECAVE_15", world);
+--SpawnNPC(Lesser_Skeleton(), "NW_MAGECAVE_16", world);
+--SpawnNPC(Lesser_Skeleton(), "NW_MAGECAVE_GUARD_02", world);
+--SpawnNPC(Lesser_Skeleton(), "NW_MAGECAVE_GUARD_01", world);
+--SpawnNPC(Lesser_Skeleton(), "NW_MAGECAVE_CROSSING", world);
+--SpawnNPC(Lesser_Skeleton(), "NW_MAGECAVE_CROSSING", world);
+--*/
+--SpawnNPC(Meatbug(), "NW_MAGECAVE_20", world);
+--SpawnNPC(Meatbug(), "NW_MAGECAVE_20", world);
+--SpawnNPC(Meatbug(), "NW_MAGECAVE_20", world);
+SpawnNPC(Minecrawler(), "NW_MAGECAVE_23", world);
+SpawnNPC(Minecrawler(), "NW_MAGECAVE_23", world);
+SpawnNPC(MinecrawlerWarrior(), "NW_MAGECAVE_27", world);
+SpawnNPC(MinecrawlerWarrior(), "NW_MAGECAVE_27", world);
+------- Schwarzer Troll -----
+SpawnNPC(Troll_Black(), "NW_TROLLAREA_PATH_84", world);
+--4445
+
+--4450
+------- Der Weg -----
+SpawnNPC(Gobbo_Green(), "NW_TROLLAREA_PATH_56", world);
+SpawnNPC(Gobbo_Green(), "NW_TROLLAREA_PATH_56", world);
+--SpawnNPC(YoungGobbo_Green(), "NW_TROLLAREA_PATH_56", world);
+------- Der groЯe See -----
+--SpawnNPC(Bloodfly(), "FP_ROAM_TROLLAREA_SEA_01", world);
+--SpawnNPC(Bloodfly(), "FP_ROAM_TROLLAREA_SEA_02", world);
+SpawnNPC(Bloodfly(), "FP_ROAM_TROLLAREA_SEA_03", world);
+SpawnNPC(Bloodfly(), "FP_ROAM_TROLLAREA_SEA_04", world);
+--RitualForest
+SpawnNPC(GiantRat(), "FP_ROAM_RITUALFOREST_CAVE_05", world);
+SpawnNPC(GiantRat(), "FP_ROAM_RITUALFOREST_CAVE_05", world);
+SpawnNPC(MinecrawlerWarrior(), "FP_ROAM_RITUALFOREST_CAVE_07", world);
+SpawnNPC(Skeleton(), "FP_ROAM_RITUALFOREST_CAVE_08", world);
+SpawnNPC(Skeleton(), "FP_ROAM_RITUALFOREST_CAVE_09", world);
+SpawnNPC(MinecrawlerWarrior(), "FP_ROAM_RITUALFOREST_CAVE_11", world);
+------- Die Maya Pyramiden ------
+SpawnNPC(Giant_Bug(), "FP_ROAM_NW_TROLLAREA_RUINS_01", world);
+SpawnNPC(Snapper(), "FP_ROAM_NW_TROLLAREA_RUINS_05", world);
+SpawnNPC(Snapper(), "FP_ROAM_NW_TROLLAREA_RUINS_09", world);
+SpawnNPC(GiantRat(), "FP_ROAM_NW_TROLLAREA_RUINS_14", world);
+SpawnNPC(GiantRat(), "FP_ROAM_NW_TROLLAREA_RUINS_15", world);
+SpawnNPC(Firewaran(), "NW_TROLLAREA_RUINS_21", world);
+SpawnNPC(Firewaran(), "FP_ROAM_NW_TROLLAREA_RUINS_21", world);
+SpawnNPC(Bloodfly(), "FP_ROAM_NW_TROLLAREA_RUINS_22", world);
+SpawnNPC(Bloodfly(), "FP_ROAM_NW_TROLLAREA_RUINS_24", world);
+SpawnNPC(Waran(), "FP_ROAM_NW_TROLLAREA_RUINS_28", world);
+SpawnNPC(Waran(), "FP_ROAM_NW_TROLLAREA_RUINS_29", world);
+SpawnNPC(Waran(), "FP_ROAM_NW_TROLLAREA_RUINS_30", world);
+SpawnNPC(Shadowbeast(), "FP_ROAM_NW_TROLLAREA_RUINS_10", world);
+
+--in der Maya-Hцhle
+--Gobbos in Eingangshцhle
+SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_01", world);
+--SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_02", world);
+--SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_03", world);
+--Gobbos in 2. Hцhle
+SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_05", world);
+--SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_06", world);
+--SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_07", world);
+--Gobbos in 3. Hцhle
+SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_09", world);
+SpawnNPC(Gobbo_Warrior(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_10", world);
+--SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_11", world);
+--SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_12", world);
+SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_14", world);
+--MineCrawler 1. Hцhle
+SpawnNPC(Minecrawler(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_16", world);
+--2. Hцhle
+SpawnNPC(Minecrawler(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_21", world);
+SpawnNPC(Minecrawler(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_23", world);
+SpawnNPC(MinecrawlerWarrior(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_20", world);
+--SpawnNPC(MinecrawlerWarrior(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_26", world);
+--Golems
+SpawnNPC(Shattered_Golem(), "FP_SHATTERED_GOLEM_01", world);
+SpawnNPC(Shattered_Golem(), "FP_SHATTERED_GOLEM_02", world);
+SpawnNPC(Shattered_Golem(), "FP_SHATTERED_GOLEM_03", world);
+SpawnNPC(Shattered_Golem(), "FP_SHATTERED_GOLEM_04", world);
+--4531
+--4545
+--SpawnNPC(Gobbo_Skeleton(), "NW_TROLLAREA_PORTALTEMPEL_15_A", world);
+--SpawnNPC(Gobbo_Skeleton(), "NW_TROLLAREA_PORTALTEMPEL_15_B", world);
+SpawnNPC(Gobbo_Skeleton(), "NW_TROLLAREA_PORTALTEMPEL_15_B", world);
+SpawnNPC(Gobbo_Skeleton(), "NW_TROLLAREA_PORTALTEMPEL_17_A", world);
+--SpawnNPC(GiantRat(), "NW_TROLLAREA_PORTALTEMPEL_12", world);
+--SpawnNPC(GiantRat(), "NW_TROLLAREA_PORTALTEMPEL_12", world);
+--SpawnNPC(GiantRat(), "NW_TROLLAREA_PORTALTEMPEL_09", world);
+--SpawnNPC(GiantRat(), "NW_TROLLAREA_PORTALTEMPEL_08", world);
+SpawnNPC(GiantRat(), "NW_TROLLAREA_PORTALTEMPEL_08", world);
+SpawnNPC(GiantRat(), "NW_TROLLAREA_PORTALTEMPEL_06", world);
+SpawnNPC(GiantRat(), "NW_TROLLAREA_PORTALTEMPEL_06", world);
+SpawnNPC(GiantRat(), "NW_TROLLAREA_PORTALTEMPEL_06", world);
+--SpawnNPC(Alligator_PortalDead, "NW_TROLLAREA_PORTALTEMPEL_DEADALLIGATOR", world);
+--B_KillNpc (Alligator_PortalDead);
+----SpawnNPC(Stoneguardian_Dead1, "NW_TROLLAREA_PORTALTEMPEL_08", world);
+----B_KillNpc (Stoneguardian_Dead1); 
+----SpawnNPC(Stoneguardian_Dead2, "AMBOSS", world);
+----B_KillNpc (Stoneguardian_Dead2); 
+----SpawnNPC(Stoneguardian_Dead3, "PORTAL", world);
+----B_KillNpc (Stoneguardian_Dead3); 
+
+--4566
+
+
+--4583
+--SpawnNPC(Wolf(), "NW_TROLLAREA_PATH_66_MONSTER", world);
+SpawnNPC(Wolf(), "NW_TROLLAREA_PATH_66_MONSTER", world);
+--SpawnNPC(Scavenger(), "NW_TROLLAREA_PLANE_07", world);
+SpawnNPC(Scavenger(), "NW_TROLLAREA_PLANE_07", world);
+SpawnNPC(Molerat(), "NW_TROLLAREA_NOVCHASE_01", world);
+--SpawnNPC(Bloodfly(), "NW_TROLLAREA_PATH_38_MONSTER", world);
+SpawnNPC(Bloodfly(), "NW_TROLLAREA_PATH_38_MONSTER", world);
+--SpawnNPC(Scavenger(), "NW_TROLLAREA_PLANE_04", world);
+--SpawnNPC(Scavenger(), "NW_TROLLAREA_RUINS_17", world);
+SpawnNPC(Scavenger(), "NW_TROLLAREA_RUINS_17", world);
+--SpawnNPC(Gobbo_Black(), "NW_TROLLAREA_RUINS_14", world);
+SpawnNPC(Gobbo_Black(), "NW_TROLLAREA_RUINS_14", world);
+--SpawnNPC(Waran(), "NW_TROLLAREA_RUINS_32", world);
+SpawnNPC(Waran(), "NW_TROLLAREA_RUINS_32", world);
+SpawnNPC(Lurker(), "NW_TROLLAREA_PATH_71_MONSTER", world);
+--SpawnNPC(Scavenger(), "NW_TROLLAREA_PATH_71_MONSTER2", world);
+--SpawnNPC(Scavenger(), "NW_TROLLAREA_PATH_71_MONSTER2", world);
+--SpawnNPC(Scavenger(), "NW_TROLLAREA_PATH_71_MONSTER2", world);
+--SpawnNPC(Scavenger(), "NW_TROLLAREA_PATH_15_MONSTER", world);
+SpawnNPC(Scavenger(), "NW_TROLLAREA_PATH_15_MONSTER", world);
+--SpawnNPC(Snapper(), "NW_TROLLAREA_BRIGDE_01", world);
+--SpawnNPC(Snapper(), "NW_TROLLAREA_BRIGDE_01", world);
+--SpawnNPC(Snapper(), "NW_TROLLAREA_BRIGDE_01", world);
+SpawnNPC(Molerat(), "NW_TROLLAREA_RITUALFOREST_04_MONSTER", world);
+--SpawnNPC(Molerat(), "NW_TROLLAREA_RITUALFOREST_04_MONSTER", world);
+--SpawnNPC(Scavenger(), "NW_TROLLAREA_RITUALPATH_04", world);
+SpawnNPC(Scavenger(), "NW_TROLLAREA_RITUALPATH_04", world);
+SpawnNPC(Scavenger(), "NW_TROLLAREA_RITUALPATH_04", world);
+SpawnNPC(Gobbo_Skeleton(), "NW_TROLLAREA_RITUAL_13", world);
+SpawnNPC(Gobbo_Skeleton(), "NW_TROLLAREA_RITUAL_13", world);
+SpawnNPC(Bloodfly(), "NW_TROLLAREA_RITUALPATH_032", world);
+SpawnNPC(Bloodfly(), "NW_TROLLAREA_RITUALPATH_032", world);
+--SpawnNPC(Bloodfly(), "NW_TROLLAREA_RITUALPATH_032", world);
+SpawnNPC(Wisp(), "NW_TROLLAREA_PLANE_01", world);
+SpawnNPC(Scavenger(), "NW_TROLLAREA_PATH_22_MONSTER", world);
+SpawnNPC(Molerat(), "NW_TROLLAREA_RITUALFOREST_06_MONSTER", world);
+SpawnNPC(Molerat(), "NW_TROLLAREA_RITUALFOREST_06_MONSTER", world);
+SpawnNPC(Lurker(), "NW_TROLLAREA_PATH_08", world);
+SpawnNPC(GiantRat(), "NW_TROLLAREA_BRIGDE_05", world);
+--SpawnNPC(GiantRat(), "NW_TROLLAREA_BRIGDE_05", world);
+--TROLLROCKCAVE
+--SpawnNPC(Skeleton(), "NW_TROLLAREA_TROLLROCKCAVE_03", world);
+--SpawnNPC(Skeleton(), "NW_TROLLAREA_TROLLROCKCAVE_03", world);
+SpawnNPC(Skeleton(), "NW_TROLLAREA_TROLLROCKCAVE_05", world);
+SpawnNPC(SkeletonLord(), "NW_TROLLAREA_TROLLROCKCAVE_07", world);
+SpawnNPC(SkeletonLord(), "NW_TROLLAREA_TROLLROCKCAVE_10", world);
+--TROLLLAKECAVE
+--SpawnNPC(Meatbug(), "NW_TROLLAREA_TROLLLAKECAVE_03A", world);
+--SpawnNPC(Meatbug(), "NW_TROLLAREA_TROLLLAKECAVE_03A", world);
+SpawnNPC(Meatbug(), "NW_TROLLAREA_TROLLLAKECAVE_03A", world);
+SpawnNPC(Meatbug(), "NW_TROLLAREA_TROLLLAKECAVE_03A", world);
+SpawnNPC(GiantRat(), "NW_TROLLAREA_TROLLLAKECAVE_02", world);
+SpawnNPC(Gobbo_Warrior(), "NW_TROLLAREA_TROLLLAKECAVE_08", world);
+SpawnNPC(Gobbo_Black(), "NW_TROLLAREA_TROLLLAKECAVE_08", world);
+--SpawnNPC(Gobbo_Green(), "NW_TROLLAREA_TROLLLAKECAVE_08", world);
+--SpawnNPC(Gobbo_Green(), "NW_TROLLAREA_TROLLLAKECAVE_09", world);
+--RIVERSIDECAVE
+SpawnNPC(Shadowbeast(), "NW_TROLLAREA_RIVERSIDECAVE_02", world);
+SpawnNPC(Shadowbeast(), "NW_TROLLAREA_RIVERSIDECAVE_07", world);
+--4679
+
+
+end
+
+function InitJhakendarNPC()
+local world = "ADDON\\ADDONWORLD.ZEN";
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_ENTRANCE_17",world);--59
+--SpawnNPC(Stoneguardian_ADANOSTEMPELENTRANCE_02,"ADW_ADANOSTEMPEL_ENTRANCE_18M",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_ENTRANCE_20",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_ENTRANCE_13",world);
+
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_TREASUREPITS_05A",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_TREASUREPITS_05B",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_TREASUREPITS_05C",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_TREASUREPITS_05D",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_TREASUREPITS_05E",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_TREASUREPITS_05F",world);
+
+SpawnNPC(GiantRat(),"ADW_ADANOSTEMPEL_TREASUREPITS_07A",world);
+SpawnNPC(GiantRat(),"ADW_ADANOSTEMPEL_TREASUREPITS_07B",world);
+
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_TREASUREPITS_09A",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_TREASUREPITS_09B",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_TREASUREPITS_09C",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_TREASUREPITS_09D",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_TREASUREPITS_09E",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_TREASUREPITS_09F",world);
+
+
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_RHADEMES_14A",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_RHADEMES_14B",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_RHADEMES_14C",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_RHADEMES_14D",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_RHADEMES_14E",world);
+SpawnNPC(Stoneguardian(),"ADW_ADANOSTEMPEL_RHADEMES_14F",world);--87
+
+
+-------------- Monster ANZAHL(10) WICHTIG fьr Garaz(FIXME_FILLER) ----------------------------152
+SpawnNPC(Minecrawler(), "ADW_MINE_MC_04",world);
+SpawnNPC(Minecrawler(), "ADW_MINE_MC_04",world);
+SpawnNPC(Minecrawler(), "ADW_MINE_MC_03",world);
+SpawnNPC(Minecrawler(), "ADW_MINE_MC_03",world);
+SpawnNPC(Minecrawler(), "ADW_MINE_MC_08",world);
+SpawnNPC(Minecrawler(), "ADW_MINE_MC_08",world);
+SpawnNPC(Minecrawler(), "ADW_MINE_MC_07",world);
+SpawnNPC(Minecrawler(), "ADW_MINE_MC_07",world);
+SpawnNPC(Minecrawler(), "ADW_MINE_MC_02",world);
+SpawnNPC(Minecrawler(), "ADW_MINE_MC_02",world);
+
+SpawnNPC(Meatbug(), "ADW_MINE_LAGER_08",world);
+SpawnNPC(Meatbug(), "ADW_MINE_LAGER_09",world);
+SpawnNPC(Meatbug(), "ADW_MINE_LAGER_05",world);
+SpawnNPC(Meatbug(), "ADW_MINE_LAGER_SIDE_04",world);
+
+SpawnNPC(Stoneguardian(), "ADW_GRUFT_01",world);
+SpawnNPC(Stoneguardian(), "ADW_GRUFT_02",world);
+SpawnNPC(Stoneguardian(), "ADW_MINE_TO_GRUFT_05",world);
+SpawnNPC(Stoneguardian(), "ADW_MINE_TO_GRUFT_06",world);--172
+
+
+--202
+SpawnNPC(Blattcrawler(), "ADW_CANYON_TELEPORT_PATH_09",world);
+SpawnNPC(Blattcrawler(), "ADW_CANYON_TELEPORT_PATH_09",world);
+SpawnNPC(Blattcrawler(), "ADW_CANYON_TELEPORT_PATH_09",world);
+
+SpawnNPC(Giant_DesertRat(), "ADW_CANYON_TELEPORT_PATH_03",world);
+SpawnNPC(Giant_DesertRat(), "ADW_CANYON_TELEPORT_PATH_03",world);
+
+SpawnNPC(Giant_DesertRat(), "ADW_CANYON_TELEPORT_PATH_04",world);
+
+SpawnNPC(Razor(), "ADW_CANYON_MINE1_01",world);
+
+
+SpawnNPC(Razor(), "ADW_CANYON_PATH_TO_LIBRARY_07A",world);
+SpawnNPC(Razor(), "ADW_CANYON_PATH_TO_LIBRARY_07A",world);
+
+
+SpawnNPC(Razor(), "ADW_CANYON_PATH_TO_LIBRARY_36",world);
+SpawnNPC(Razor(), "ADW_CANYON_PATH_TO_LIBRARY_36",world);
+
+
+SpawnNPC(Giant_DesertRat(), "ADW_CANYON_PATH_TO_LIBRARY_40",world);
+SpawnNPC(Giant_DesertRat(), "ADW_CANYON_PATH_TO_LIBRARY_40",world);
+
+SpawnNPC(Giant_DesertRat(), "ADW_CANYON_PATH_TO_LIBRARY_03",world);
+
+SpawnNPC(Bloodhound(), "ADW_CANYON_PATH_TO_BANDITS_31",world);
+
+SpawnNPC(OrcBiter(), "ADW_CANYON_PATH_TO_BANDITS_52",world);
+SpawnNPC(OrcBiter(), "ADW_CANYON_PATH_TO_BANDITS_52",world);
+
+SpawnNPC(Razor(), "ADW_CANYON_PATH_TO_MINE2_04",world);
+
+
+SpawnNPC(OrcBiter(), "ADW_CANYON_PATH_TO_LIBRARY_31A",world);
+SpawnNPC(OrcBiter(), "ADW_CANYON_PATH_TO_LIBRARY_31A",world);
+SpawnNPC(OrcBiter(), "ADW_CANYON_PATH_TO_LIBRARY_31A",world);
+
+SpawnNPC(Blattcrawler(), "ADW_CANYON_PATH_TO_BANDITS_55",world);
+SpawnNPC(Blattcrawler(), "ADW_CANYON_PATH_TO_BANDITS_55",world);
+
+SpawnNPC(Shadowbeast(), "ADW_CANYON_PATH_TO_BANDITS_06E",world);
+
+SpawnNPC(OrcBiter(), "ADW_CANYON_PATH_TO_LIBRARY_16A",world);
+SpawnNPC(OrcBiter(), "ADW_CANYON_PATH_TO_LIBRARY_16A",world);
+SpawnNPC(OrcBiter(), "ADW_CANYON_PATH_TO_LIBRARY_16A",world);
+
+SpawnNPC(OrcBiter(), "ADW_CANYON_PATH_TO_LIBRARY_17",world);
+
+SpawnNPC(OrcBiter(), "ADW_CANYON_ORCS_09",world);
+
+
+SpawnNPC(Wolf(), "ADW_CANYON_PATH_TO_LIBRARY_37",world);
+SpawnNPC(Wolf(), "ADW_CANYON_PATH_TO_LIBRARY_37",world);
+SpawnNPC(Wolf(), "ADW_CANYON_PATH_TO_LIBRARY_12A",world);
+SpawnNPC(Wolf(), "ADW_CANYON_PATH_TO_LIBRARY_12A",world);
+SpawnNPC(Wolf(), "ADW_CANYON_PATH_TO_LIBRARY_12A",world);
+SpawnNPC(Wolf(), "ADW_CANYON_PATH_TO_LIBRARY_12A",world);
+
+SpawnNPC(OrcWarrior(), "ADW_CANYON_ORCS_08",world);
+SpawnNPC(OrcWarrior(), "ADW_CANYON_ORCS_08",world);
+
+SpawnNPC(OrcWarrior(), "ADW_CANYON_PATH_TO_LIBRARY_14",world);
+SpawnNPC(OrcWarrior(), "ADW_CANYON_PATH_TO_LIBRARY_14",world);
+
+SpawnNPC(OrcWarrior(), "ADW_CANYON_PATH_TO_LIBRARY_19",world);
+SpawnNPC(OrcWarrior(), "ADW_CANYON_PATH_TO_LIBRARY_20",world);
+SpawnNPC(OrcWarrior(), "ADW_CANYON_PATH_TO_LIBRARY_20",world);
+
+SpawnNPC(OrcWarrior(), "ADW_CANYON_ORCS_04",world);
+
+SpawnNPC(OrcWarrior(), "ADW_CANYON_ORCS_05",world);
+SpawnNPC(OrcWarrior(), "ADW_CANYON_ORCS_05",world);
+
+SpawnNPC(OrcWarrior(), "ADW_CANYON_ORCS_02",world);
+SpawnNPC(OrcShaman(), "ADW_CANYON_ORCS_02",world);
+SpawnNPC(OrcShaman(), "ADW_CANYON_ORCS_02",world);
+
+SpawnNPC(Bloodhound(), "ADW_CANYON_PATH_TO_MINE2_09",world);
+SpawnNPC(Bloodhound(), "ADW_CANYON_PATH_TO_MINE2_09",world);
+
+SpawnNPC(Bloodhound(), "ADW_CANYON_PATH_TO_MINE2_06",world);
+
+
+SpawnNPC(Giant_DesertRat(), "ADW_CANYON_PATH_TO_BANDITS_26",world);
+SpawnNPC(Giant_DesertRat(), "ADW_CANYON_PATH_TO_BANDITS_26",world);
+
+SpawnNPC(Giant_DesertRat(), "ADW_CANYON_PATH_TO_BANDITS_24",world);
+
+SpawnNPC(Giant_DesertRat(), "ADW_CANYON_PATH_TO_BANDITS_66",world);
+SpawnNPC(Giant_DesertRat(), "ADW_CANYON_PATH_TO_BANDITS_66",world);
+
+SpawnNPC(Minecrawler(), "ADW_CANYON_PATH_TO_BANDITS_22",world);
+SpawnNPC(MinecrawlerWarrior(), "ADW_CANYON_PATH_TO_BANDITS_22",world);
+
+SpawnNPC(Minecrawler(), "ADW_CANYON_PATH_TO_BANDITS_21",world);
+
+SpawnNPC(Minecrawler(), "ADW_CANYON_PATH_TO_BANDITS_17",world);
+SpawnNPC(Minecrawler(), "ADW_CANYON_PATH_TO_BANDITS_17",world);
+
+SpawnNPC(MinecrawlerWarrior(), "ADW_CANYON_PATH_TO_BANDITS_14",world);
+SpawnNPC(Minecrawler(), "ADW_CANYON_PATH_TO_BANDITS_14",world);
+
+SpawnNPC(Minecrawler(), "ADW_CANYON_PATH_TO_BANDITS_62",world);
+SpawnNPC(Minecrawler(), "ADW_CANYON_PATH_TO_BANDITS_19",world);
+
+SpawnNPC(Blattcrawler(), "ADW_CANYON_PATH_TO_BANDITS_06",world);
+
+SpawnNPC(Blattcrawler(), "ADW_CANYON_PATH_TO_BANDITS_09",world);
+
+--Hцhle 
+
+
+--hintere Mine
+
+------------------------Library----------------------------
+SpawnNPC(Shadowbeast(), "ADW_CANYON_LIBRARY_04",world);
+SpawnNPC(Shadowbeast(), "ADW_CANYON_LIBRARY_LEFT_08",world);
+SpawnNPC(Stoneguardian(), "ADW_CANYON_LIBRARY_LEFT_07",world);
+SpawnNPC(Shadowbeast(), "ADW_CANYON_LIBRARY_RIGHT_07",world);
+SpawnNPC(Stoneguardian(), "ADW_CANYON_LIBRARY_RIGHT_13",world);
+
+SpawnNPC(Stoneguardian(), "ADW_CANYON_LIBRARY_STONIE_01",world);
+SpawnNPC(Stoneguardian(), "ADW_CANYON_LIBRARY_STONIE_02",world);
+SpawnNPC(Stoneguardian(), "ADW_CANYON_LIBRARY_STONIE_03",world);
+SpawnNPC(Stoneguardian(), "ADW_CANYON_LIBRARY_STONIE_04",world);
+SpawnNPC(Stoneguardian(), "ADW_CANYON_LIBRARY_STONIE_05",world);
+
+SpawnNPC(MinecrawlerWarrior(), "ADW_CANYON_MINE1_13",world);
+SpawnNPC(MinecrawlerWarrior(), "ADW_CANYON_MINE2_09",world);
+SpawnNPC(MinecrawlerWarrior(), "ADW_CANYON_MINE2_09",world);
+
+SpawnNPC(Minecrawler(), "ADW_CANYON_MINE1_10",world);
+SpawnNPC(Minecrawler(), "ADW_CANYON_MINE1_05",world);
+--337
+
+--369
+SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_PLATEAU_08",world);
+
+
+SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_2_VALLEY_05",world);
+SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_2_VALLEY_05",world);
+SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_2_VALLEY_05",world);
+SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_2_VALLEY_02B",world);
+SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_2_VALLEY_02B",world);
+
+
+SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_2_VALLEY_11",world);
+SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_2_VALLEY_11",world);
+--SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_2_VALLEY_02A",world); --RAUS wegen AlliJack
+
+SpawnNPC(Waran(),"ADW_ENTRANCE_2_VALLEY_08",world);
+
+SpawnNPC(Waran(),"ADW_ENTRANCE_PATH2BANDITS_05P",world);
+SpawnNPC(Waran(),"ADW_ENTRANCE_PATH2BANDITS_05P",world);
+ 
+
+SpawnNPC(Bloodfly(),"ADW_ENTRANCE_PATH2BANDITS_10",world);
+SpawnNPC(Bloodfly(),"ADW_ENTRANCE_PATH2BANDITS_10",world);
+
+SpawnNPC(Bloodfly(),"ADW_ENTRANCE_PATH2BANDITS_03",world);
+
+SpawnNPC(Waran(),"ADW_ENTRANCE_PATH2BANDITS_05",world);
+
+SpawnNPC(Razor(),"ADW_ENTRANCE_RUIN1_01",world);
+SpawnNPC(GiantRat(),"ADW_ENTRANCE_RUIN1_01",world);
+
+
+SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_BEHINDAKROPOLIS_04",world);
+SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_BEHINDAKROPOLIS_04",world);
+SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_2_PIRATECAMP_13",world);
+SpawnNPC(Blattcrawler(),"ADW_ENTRANCE_2_PIRATECAMP_13",world);
+
+SpawnNPC(Stoneguardian(),"ADW_PORTALTEMPEL_08A",world);
+SpawnNPC(Stoneguardian(),"ADW_PORTALTEMPEL_08B",world);
+
+SpawnNPC(Molerat(),"ADW_ENTRANCE_PATH2BANDITSCAVE1_05",world);
+SpawnNPC(Molerat(),"ADW_ENTRANCE_PATH2BANDITSCAVE1_06",world);
+SpawnNPC(Molerat(),"ADW_ENTRANCE_2_PIRATECAMP_05",world);
+SpawnNPC(Molerat(),"ADW_ENTRANCE_2_PIRATECAMP_05",world);
+
+SpawnNPC(Gobbo_Warrior(),"ADW_ENTRANCE_2_PIRATECAMP_19",world);
+SpawnNPC(Gobbo_Black(),"ADW_ENTRANCE_2_PIRATECAMP_19",world);
+SpawnNPC(Gobbo_Black(),"ADW_ENTRANCE_2_PIRATECAMP_19",world);
+
+SpawnNPC(Shadowbeast(),"ADW_ENTRANCE_2_PIRATECAMP_22",world);
+--417
+
+
+-------------------Ravens Tempel ---------------------- 579
+SpawnNPC(Zombie_Addon_Knecht(),"BL_RAVEN_SIDE_17",world);
+SpawnNPC(Zombie_Addon_Knecht(),"BL_RAVEN_SIDE_18",world);
+SpawnNPC(Zombie_Addon_Knecht(),"BL_RAVEN_SIDE_19",world);
+SpawnNPC(Zombie_Addon_Knecht(),"BL_RAVEN_SIDE_20",world);
+SpawnNPC(Zombie_Addon_Knecht(),"BL_RAVEN_SIDE_21",world);
+SpawnNPC(Zombie_Addon_Knecht(),"BL_RAVEN_SIDE_22",world);--585
+
+
+-------------------MONSTER------------------------------------ 588
+SpawnNPC(SwampGolem(),"ADW_PATH_TO_GOLEM_05",world);
+SpawnNPC(SwampGolem(),"ADW_PATH_TO_GOLEM_06",world);
+SpawnNPC(SwampGolem(),"ADW_PATH_TO_GOLEM_08",world);
+
+SpawnNPC(SwampGolem(),"ADW_SWAMP_GOLEM_02",world);
+SpawnNPC(SwampGolem(),"ADW_SWAMP_GOLEM_03",world);
+SpawnNPC(SwampGolem(),"ADW_SWAMP_GOLEM_04",world);
+
+--Bloodflies rechts vom Eingang BL
+SpawnNPC(Bloodfly(),"ADW_BL_FLIES_03",world);
+SpawnNPC(Bloodfly(),"ADW_BL_FLIES_04",world);
+SpawnNPC(Bloodfly(),"ADW_BL_FLIES_06",world);
+SpawnNPC(Bloodfly(),"ADW_BL_FLIES_07",world);
+
+--Steg
+SpawnNPC(Gobbo_Black(),"ADW_BANDIT_VP1_05",world);
+
+
+--Sharks hinter Vorposten 3
+SpawnNPC(Swampshark(),"ADW_SHARK_01",world);
+SpawnNPC(Swampshark(),"ADW_SHARK_02",world);
+SpawnNPC(Swampshark(),"ADW_SHARK_03",world);
+--und Weg zurьck zum Damm
+SpawnNPC(Swampshark(),"ADW_SHARK_04",world);
+SpawnNPC(Swampshark(),"ADW_SHARK_05",world);
+SpawnNPC(Swampshark(),"ADW_SHARK_06",world);
+SpawnNPC(Swampshark(),"ADW_SHARK_07",world);
+SpawnNPC(Swampshark(),"ADW_SHARK_08",world);
+SpawnNPC(Swampshark(),"ADW_SHARK_09",world);
+SpawnNPC(Swampshark(),"ADW_SHARK_10",world);
+
+
+--Swamp Shark StraЯe
+SpawnNPC(SwampGolem(),"ADW_SWAMP_WAND_01",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_WAND_02",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_WAND_03",world);
+
+SpawnNPC(Swampshark(),"ADW_SWAMP_SHARKSTREET_02",world);
+SpawnNPC(Swampshark(),"ADW_SWAMP_SHARKSTREET_03",world);
+SpawnNPC(Swampshark(),"ADW_SWAMP_SHARKSTREET_07",world);
+SpawnNPC(Swampshark(),"ADW_SWAMP_SHARKSTREET_08",world);
+SpawnNPC(Swampshark(),"ADW_SWAMP_SHARKSTREET_09",world);
+SpawnNPC(Swampshark(),"ADW_SWAMP_SHARKSTREET_10",world);
+
+SpawnNPC(Swamprat(),"ADW_CANYON_PATH_TO_BANDITS_01B",world);
+
+SpawnNPC(Bloodfly(),"ADW_LITTLE_HILL_03",world);
+SpawnNPC(Bloodfly(),"ADW_LITTLE_HILL_03",world);
+SpawnNPC(Bloodfly(),"ADW_LITTLE_HILL_04",world);
+
+--Weg rauf zum Big Sea
+SpawnNPC(Bloodfly(),"ADW_SWAMP_04",world);
+SpawnNPC(Bloodfly(),"ADW_SWAMP_04",world);
+
+SpawnNPC(Bloodfly(),"ADW_SWAMP_05",world);
+SpawnNPC(Bloodfly(),"ADW_SWAMP_05",world);
+
+--Little Sea 
+
+SpawnNPC(Bloodfly(),"ADW_SWAMP_LITTLE_SEA_01",world);
+SpawnNPC(Bloodfly(),"ADW_SWAMP_LITTLE_SEA_01",world);
+
+SpawnNPC(Bloodfly(),"ADW_SWAMP_LITTLE_SEA_02",world);
+SpawnNPC(Bloodfly(),"ADW_SWAMP_LITTLE_SEA_02",world);
+
+SpawnNPC(Bloodfly(),"ADW_SWAMP_LITTLE_SEA_03",world);
+SpawnNPC(Bloodfly(),"ADW_SWAMP_LITTLE_SEA_03",world);
+
+SpawnNPC(Bloodfly(),"ADW_SWAMP_12",world);
+SpawnNPC(Bloodfly(),"ADW_SWAMP_13",world);
+
+--Pfuetze 
+SpawnNPC(Swamprat(),"ADW_PFUETZE_01",world);
+SpawnNPC(Swamprat(),"ADW_PFUETZE_02",world);
+SpawnNPC(Swamprat(),"ADW_PFUETZE_03",world);
+SpawnNPC(Swamprat(),"ADW_PFUETZE_04",world);
+
+--Ruine
+SpawnNPC(Gobbo_Warrior(),"ADW_BANDIT_VP1_07_D",world);
+SpawnNPC(Gobbo_Black(),"ADW_BANDIT_VP1_07_E",world);
+SpawnNPC(Gobbo_Black(),"ADW_BANDIT_VP1_07_F",world);
+SpawnNPC(Gobbo_Black(),"ADW_SWAMP_LITTLE_SEA_03_B",world);
+SpawnNPC(Gobbo_Black(),"ADW_SWAMP_09_C",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_HOHLWEG_01",world);
+
+
+SpawnNPC(Swamprat(),"ADW_SWAMP_LOCH_01",world);
+SpawnNPC(Waran(),"ADW_SWAMP_LOCH_02",world);
+SpawnNPC(Waran(),"ADW_SWAMP_LOCH_03",world);
+SpawnNPC(Swamprat(),"ADW_SWAMP_LOCH_04",world);
+
+SpawnNPC(Gobbo_Black(),"ADW_SWAMP_08_D",world);
+SpawnNPC(Gobbo_Black(),"ADW_SWAMP_08_E",world);
+
+SpawnNPC(Bloodfly(),"ADW_PATH_TO_BL_09",world);
+SpawnNPC(SwampDrone(),"ADW_PATH_TO_BL_10",world);
+SpawnNPC(Bloodfly(),"ADW_PATH_TO_BL_10",world);
+SpawnNPC(Bloodfly(),"ADW_PATH_TO_LOCH_01",world);
+SpawnNPC(Bloodfly(),"ADW_PATH_TO_LOCH_01",world);
+
+SpawnNPC(SwampDrone(),"ADW_SWAMP_HILLS_DOWN_05",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_10",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_13",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_14",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_06",world);
+SpawnNPC(Bloodfly(),"ADW_SWAMP_05",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_12",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_BF_NEST_06",world);
+
+SpawnNPC(SwampDrone(),"ADW_SWAMP_HOHLWEG_03",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_HOHLWEG_04",world);
+
+------------------Senat---(und Wege dorthin)--------------------
+
+--Monster
+SpawnNPC(Stoneguardian(),"ADW_SENAT_SIDE_01",world);
+SpawnNPC(Stoneguardian(),"ADW_SENAT_SIDE_02",world);
+SpawnNPC(Stoneguardian(),"ADW_SENAT_SIDE_03",world);
+
+
+SpawnNPC(Stoneguardian(),"ADW_SENAT_GUARDIAN_01",world);
+SpawnNPC(Stoneguardian(),"ADW_SENAT_GUARDIAN_02",world);
+SpawnNPC(Stoneguardian(),"ADW_SENAT_GUARDIAN_03",world);
+
+SpawnNPC(Stoneguardian(),"ADW_SENAT_INSIDE_01",world);
+
+SpawnNPC(Waran(),"ADW_SENAT_MONSTER_01",world);
+SpawnNPC(Waran(),"ADW_SENAT_MONSTER_02",world);
+SpawnNPC(Waran(),"ADW_SENAT_MONSTER_03",world);
+SpawnNPC(Waran(),"ADW_SENAT_MONSTER_04",world);
+
+SpawnNPC(Waran(),"ADW_SENAT_05",world);
+SpawnNPC(Waran(),"ADW_SENAT_05",world);
+
+SpawnNPC(Swamprat(),"ADW_SWAMP_HILLS_DOWN_07",world);
+SpawnNPC(Swamprat(),"ADW_SWAMP_HILLS_DOWN_07",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_HILLS_DOWN_05",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_HILLS_DOWN_06",world);
+
+
+SpawnNPC(SwampDrone(),"ADW_SWAMP_HILLS_DOWN_03",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_HILLS_DOWN_03",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_15",world);
+SpawnNPC(Swamprat(),"ADW_HOHLWEG_CENTER",world);
+SpawnNPC(Swamprat(),"FP_ROAM_BF_NEST_26",world);
+SpawnNPC(Swamprat(),"ADW_BANDITSCAMP_RAKEPLACE_03",world);
+SpawnNPC(SwampDrone(),"ADW_CANYON_PATH_TO_BANDITS_02",world);
+SpawnNPC(SwampDrone(),"ADW_PFUETZE_02",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_LOCH_05",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_LOCH_06",world);
+
+
+SpawnNPC(Swamprat(),"ADW_SWAMP_TO_BIGSEA_01",world);
+SpawnNPC(Swamprat(),"ADW_SWAMP_TO_BIGSEA_01",world);
+
+SpawnNPC(Swamprat(),"ADW_SWAMP_HOHLWEG_02",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_HOHLWEG_05",world);
+SpawnNPC(SwampDrone(),"ADW_SWAMP_HOHLWEG_05",world);
+
+SpawnNPC(Swamprat(),"ADW_SWAMP_07",world);
+SpawnNPC(Swamprat(),"ADW_SWAMP_07",world);--755
+
+
+-- --------- Monster -----------------------------821
+SpawnNPC(Lurker(),"ADW_PIRATECAMP_ISLE1_01",world);
+SpawnNPC(Lurker(),"ADW_PIRATECAMP_ISLE1_01",world);
+SpawnNPC(Lurker(),"ADW_PIRATECAMP_ISLE1_01",world);
+
+-- -------- Strandlurker ------------------------
+SpawnNPC(Waran(),"ADW_PIRATECAMP_BEACH_27",world);
+SpawnNPC(Waran(),"ADW_PIRATECAMP_BEACH_27",world);
+
+SpawnNPC(Waran(),"ADW_PIRATECAMP_BEACH_28",world);
+SpawnNPC(Waran(),"ADW_PIRATECAMP_BEACH_28",world);
+SpawnNPC(Waran(),"ADW_PIRATECAMP_BEACH_28",world);
+
+SpawnNPC(Shadowbeast(),"ADW_PIRATECAMP_CAVE3_04",world);
+
+---------- Einsamer Strand -----------------------
+
+SpawnNPC(Waran(),"ADW_PIRATECAMP_LONEBEACH_11",world);
+SpawnNPC(Waran(),"ADW_PIRATECAMP_LONEBEACH_12",world);
+SpawnNPC(Firewaran(),"ADW_PIRATECAMP_LONEBEACH_10",world);
+SpawnNPC(Firewaran(),"ADW_PIRATECAMP_LONEBEACH_10",world);
+SpawnNPC(Firewaran(),"DAW_PIRTECAMP_LONEBEACH_07",world);
+SpawnNPC(Firewaran(),"ADW_PIRATECAMP_LONEBEACH_08",world);
+SpawnNPC(Waran(),"ADW_PIRATECAMP_LONEBEACH_05",world);
+SpawnNPC(Waran(),"ADW_PIRATECAMP_LONEBEACH_04",world);
+
+SpawnNPC(Zombie1(),"ADW_PIRATECAMP_LONEBEACH_CAVE_03",world);
+SpawnNPC(MayaZombie2(),"ADW_PIRATECAMP_LONEBEACH_CAVE_03",world);
+SpawnNPC(Zombie3(),"ADW_PIRATECAMP_LONEBEACH_CAVE_03",world);
+
+-- --------- Versteckte Hцhle ----------------------
+SpawnNPC(Lurker(),"ADW_PIRATECAMP_SECRETCAVE_01",world);
+SpawnNPC(Lurker(),"ADW_PIRATECAMP_SECRETCAVE_01",world);
+
+------------ Holzfдllerlager -----------------------
+
+SpawnNPC(Meatbug(),"ADW_PIRATECAMP_LUMBER_01",world);
+SpawnNPC(Meatbug(),"ADW_PIRATECAMP_LUMBER_01",world);
+SpawnNPC(Meatbug(),"ADW_PIRATECAMP_LUMBER_01",world);
+
+-- --------- Vor dem Turm ------------------------
+
+SpawnNPC(Gobbo_Black(),"ADW_PIRATECAMP_PLAIN_01",world);
+SpawnNPC(Gobbo_Black(),"ADW_PIRATECAMP_PLAIN_01",world);
+SpawnNPC(Gobbo_Black(),"ADW_PIRATECAMP_PLAIN_02",world);
+
+-- --------- Hinter dem Turm --------------------
+
+SpawnNPC(Blattcrawler(),"ADW_PIRATCAMP_PLAIN_05",world);
+SpawnNPC(Blattcrawler(),"ADW_PIRATCAMP_PLAIN_05",world);
+
+------------ Wasserloch -------------------------
+ 
+SpawnNPC(Blattcrawler(),"ADW_PIRATCAMP_PLAIN_05",world);
+SpawnNPC(Blattcrawler(),"ADW_PIRATCAMP_PLAIN_05",world);
+
+SpawnNPC(Waran(),"ADW_PIRATECAMP_WATERHOLE_08",world);
+
+SpawnNPC(Lurker(),"ADW_PIRATECAMP_WATERHOLE_04",world);
+
+------------ Weg ---------------------------------
+
+SpawnNPC(Blattcrawler(),"ADW_PIRATECAMP_WAY_SPAWN_01",world);
+SpawnNPC(Blattcrawler(),"ADW_PIRATECAMP_WAY_SPAWN_02",world);--884
+
+
+
+--977
+-- ------ Troll ------
+SpawnNPC(Troll(),"ADW_VALLEY_BIGCAVE_07",world);
+SpawnNPC(Troll(),"ADW_VALLEY_PATH_048_B",world);
+
+-- ------ Gobbo_Black ------
+SpawnNPC(Gobbo_Black(),"ADW_VALLEY_PATH_003_A",world);
+SpawnNPC(Gobbo_Warrior(),"ADW_VALLEY_BIGCAVE_08",world);
+SpawnNPC(Gobbo_Black(),"ADW_VALLEY_BIGCAVE_08",world);
+SpawnNPC(Gobbo_Black(),"ADW_VALLEY_BIGCAVE_08",world);
+SpawnNPC(Gobbo_Black(),"ADW_VALLEY_BIGCAVE_08",world);
+SpawnNPC(MayaZombie3(),"ADW_VALLEY_BIGCAVE_18",world);
+SpawnNPC(Gobbo_Black(),"ADW_VALLEY_PATH_012",world);
+SpawnNPC(Gobbo_Warrior(),"ADW_VALLEY_PATH_115_F",world);
+SpawnNPC(Gobbo_Warrior(),"ADW_VALLEY_PATH_115_F",world);
+SpawnNPC(Gobbo_Warrior(),"ADW_VALLEY_PATH_054_B",world);
+SpawnNPC(Gobbo_Black(),"ADW_VALLEY_PATH_054_B",world);
+SpawnNPC(Gobbo_Black(),"ADW_VALLEY_PATH_054_D",world);
+SpawnNPC(Gobbo_Black(),"ADW_VALLEY_PATH_054_E",world);
+SpawnNPC(Gobbo_Warrior(),"ADW_VALLEY_PATH_054_F",world);
+SpawnNPC(Gobbo_Warrior(),"ADW_VALLEY_PATH_058_CAVE_09",world);
+SpawnNPC(Gobbo_Warrior(),"ADW_VALLEY_PATH_058_CAVE_09",world);
+SpawnNPC(Gobbo_Warrior(),"ADW_VALLEY_PATH_058_CAVE_09",world);
+
+-- ------ Harpie ------
+SpawnNPC(Harpie(),"ADW_VALLEY_BIGCAVE_06",world);
+SpawnNPC(Harpie(),"ADW_VALLEY_BIGCAVE_06",world);
+SpawnNPC(Harpie(),"ADW_VALLEY_BIGCAVE_15",world);
+SpawnNPC(Harpie(),"ADW_VALLEY_BIGCAVE_15",world);
+SpawnNPC(Harpie(),"ADW_VALLEY_BIGCAVE_15",world);
+SpawnNPC(Harpie(),"ADW_VALLEY_PATH_110",world);
+SpawnNPC(Harpie(),"ADW_VALLEY_PATH_110",world);
+
+-- ------ Snapper ------
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_020",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_020",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_BIGCAVE_01",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_048_A",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_048_A",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_048_A",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_047_D",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_047_D",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_047_D",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_047_G",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_047_G",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_038_E",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_038_E",world);
+SpawnNPC(Snapper(),"ADW_VALLEY_PATH_038_J",world);
+
+-- ------ Shadowbeast ------
+SpawnNPC(Shadowbeast(),"ADW_VALLEY_PATH_029",world);
+
+-- ------ Skeleton ------
+SpawnNPC(Skeleton(),"ADW_VALLEY_PATH_020_CAVE_05",world);
+SpawnNPC(Skeleton(),"ADW_VALLEY_PATH_020_CAVE_05",world);
+
+-- ------Scavenger ------
+SpawnNPC(ScavengerDemon(),"ADW_VALLEY_PATH_032_G",world);
+SpawnNPC(ScavengerDemon(),"ADW_VALLEY_PATH_032_G",world);
+SpawnNPC(ScavengerDemon(),"ADW_VALLEY_PATH_032_G",world);
+SpawnNPC(ScavengerDemon(),"ADW_VALLEY_PATH_121_A",world);
+SpawnNPC(ScavengerDemon(),"ADW_VALLEY_PATH_121_A",world);
+SpawnNPC(ScavengerDemon(),"ADW_VALLEY_PATH_121_A",world);
+SpawnNPC(ScavengerDemon(),"ADW_VALLEY_PATH_120_A",world);
+SpawnNPC(ScavengerDemon(),"ADW_VALLEY_PATH_120_A",world);
+SpawnNPC(ScavengerDemon(),"ADW_VALLEY_PATH_120_A",world);
+
+-- ------ Molerat ------
+SpawnNPC(Swamprat(),"ADW_VALLEY_PATH_027",world);
+SpawnNPC(Swamprat(),"ADW_VALLEY_PATH_045",world);
+SpawnNPC(Swamprat(),"ADW_VALLEY_PATH_129_B",world);
+SpawnNPC(Swamprat(),"ADW_VALLEY_PATH_129_B",world);
+SpawnNPC(Swamprat(),"ADW_VALLEY_PATH_129_B",world);
+
+-- ------ Minecrawler ------
+SpawnNPC(Minecrawler(),"ADW_VALLEY_PATH_131",world);
+SpawnNPC(Minecrawler(),"ADW_VALLEY_PATH_131",world);
+SpawnNPC(Minecrawler(),"ADW_VALLEY_PATH_132_A",world);
+SpawnNPC(Minecrawler(),"ADW_VALLEY_PATH_132_A",world);
+SpawnNPC(Minecrawler(),"ADW_VALLEY_PATH_134",world);
+SpawnNPC(Minecrawler(),"ADW_VALLEY_PATH_134",world);
+SpawnNPC(Minecrawler(),"ADW_VALLEY_PATH_135",world);
+SpawnNPC(Minecrawler(),"ADW_VALLEY_PATH_135",world);
+SpawnNPC(Minecrawler(),"ADW_VALLEY_PATH_135",world);
+SpawnNPC(Minecrawler(),"ADW_VALLEY_PATH_135",world);
+SpawnNPC(Minecrawler(),"ADW_VALLEY_PATH_135",world);
+SpawnNPC(MinecrawlerWarrior(),"ADW_VALLEY_PATH_058_CAVE_13",world);
+
+-- ------ Blattcrawler ------
+SpawnNPC(Blattcrawler(),"ADW_VALLEY_PATH_024_A",world);
+SpawnNPC(Blattcrawler(),"ADW_VALLEY_PATH_024_A",world);
+SpawnNPC(Blattcrawler(),"ADW_VALLEY_PATH_125",world);
+SpawnNPC(SwampGolem(),"ADW_VALLEY_PATH_064_A",world);
+SpawnNPC(Blattcrawler(),"ADW_VALLEY_PATH_062",world);
+SpawnNPC(Blattcrawler(),"ADW_VALLEY_PATH_062",world);
+
+-- ------ Bloodfly ------
+SpawnNPC(Blattcrawler(),"ADW_VALLEY_PATH_102_A",world);
+SpawnNPC(Blattcrawler(),"ADW_VALLEY_PATH_102_A",world);
+SpawnNPC(ScavengerDemon(),"ADW_VALLEY_PATH_116_A",world);
+SpawnNPC(Swamprat(),"ADW_VALLEY_PATH_043",world);
+SpawnNPC(Swamprat(),"ADW_VALLEY_PATH_043",world);
+SpawnNPC(Blattcrawler(),"ADW_VALLEY_PATH_053",world);
+SpawnNPC(Bloodfly(),"ADW_VALLEY_PATH_017",world);
+
+-- ------ Meatbug ------
+SpawnNPC(Meatbug(),"ADW_VALLEY_PATH_058",world);
+
+-- ------ Orcs ------
+SpawnNPC(OrcWarrior(),"ADW_VALLEY_PATH_033_A",world);
+SpawnNPC(OrcWarrior(),"ADW_VALLEY_PATH_035",world);
+SpawnNPC(OrcWarrior(),"ADW_VALLEY_PATH_036",world);
+SpawnNPC(OrcShaman(),"ADW_VALLEY_PATH_115_E",world);
+
+-- ------ Zombie ------
+SpawnNPC(MayaZombie1(),"ADW_VALLEY_PATH_072",world);
+SpawnNPC(Zombie4(),"ADW_VALLEY_PATH_072",world);
+SpawnNPC(Zombie3(),"ADW_VALLEY_PATH_073",world);
+SpawnNPC(MayaZombie4(),"ADW_VALLEY_PATH_072",world);
+SpawnNPC(Zombie4(),"ADW_VALLEY_PATH_073",world);
+SpawnNPC(Zombie2(),"ADW_VALLEY_PATH_073",world);
+
+
+SpawnNPC(Stoneguardian(),"ADW_VALLEY_SHOWCASE1_02",world);
+SpawnNPC(Stoneguardian(),"ADW_VALLEY_SHOWCASE1_03",world);--1100
+
+
+
+
+
+end
+
+
+
+function OnFilterscriptInit()
+	
+	print("--------------------");
+	print("NPC Loaded");
+	print("--------------------");
+	SetRespawnTime(2147483647);
+	Enable_OnPlayerKey(1);
+	--NPC and AI
+	InitAiSystem();
+	InitColonyNpc();
+	--InitNewWorldNPC();
+	--InitJhakendarNPC();
+	--AI_DEBUG_DURATION = true;--The AI_Timer will print the duration! It shouldnt go over 200, if it do, Init with InitAiSystem(false) or set down AI_NPCIT_SIZE (default: 70)
+	--AI_NPCIT_SIZE = 55;--removed!
+	
+	
+	
+end
+
+function OnGamemodeExit()
+
+	print("-------------------");
+	print("Gamemode was exited");
+	print("-------------------");
+end
+
+function OnPlayerChangeClass(playerid, classid)
+ 
+end
+
+function OnPlayerSelectClass(playerid, classid)
+ 
+end
+
+function OnPlayerConnect(playerid)
+	AI_OnPlayerConnect(playerid);
+end
+
+function OnPlayerDisconnect(playerid, reason)
+		AI_OnPlayerDisconnect(playerid);
+end
+
+
+function OnPlayerKey(playerid, keydown)
+	AI_OnPlayerKey(playerid, keydown);
+	
+	if(keydown == KEY_P)then
+		StopTradingPlayers(0);
+	end
+end
+
+function OnPlayerHit(playerid, killerid)
+	AI_OnPlayerHit(playerid, killerid);
+end
+
+function OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
+	AI_OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid);
+end
+
+
+
+function OnPlayerSpawn(playerid, classid)
+
+end
+
+
+function OnPlayerResponseItem(playerid, slot, item_instance, amount, equipped)
+	AI_OnPlayerResponseItem(playerid, slot, item_instance, amount, equipped);
+end
+
+function ORC_TA_TEST(_playerid)
+	
+	if(TA_FUNC(_playerid, 06, 0, 19, 0))then
+		AI_ClearStates(_playerid);
+		AI_SETWALKTYPE(_playerid, 1);
+		AI_GOTO(_playerid, "OCR_ARENABATTLE_INSIDE");
+	end
+	
+	if(TA_FUNC(_playerid, 19, 0, 06, 0))then
+		AI_ClearStates(_playerid);
+		AI_SETWALKTYPE(_playerid, 1);
+		if(AI_NPCList[_playerid].StartWP ~= nil)then
+			AI_GOTO(_playerid, AI_NPCList[_playerid].StartWP);
+		end
+	end
+end
+
+function ORC_TA_TEST_END(_playerid)
+	if(TA_FUNC(_playerid, 0, 0, 24, 0))then
+		AI_ClearStates(_playerid);
+		AI_SETWALKTYPE(_playerid, 1);
+		if(AI_NPCList[_playerid].StartWP ~= nil)then
+			AI_GOTO(_playerid, AI_NPCList[_playerid].StartWP);
+		end
+	end
+end
+
+function BDT_TA_TEST(_playerid)
+	
+	if(TA_FUNC(_playerid, 06, 0, 19, 0))then
+		AI_ClearStates(_playerid);
+		AI_SETWALKTYPE(_playerid, 1);
+		AI_GOTO(_playerid, "NW_CITY_HABOUR_PUFF_02");
+	end
+	
+	if(TA_FUNC(_playerid, 19, 0, 06, 0))then
+		AI_ClearStates(_playerid);
+		AI_SETWALKTYPE(_playerid, 1);
+		if(AI_NPCList[_playerid].StartWP ~= nil)then
+			AI_GOTO(_playerid, AI_NPCList[_playerid].StartWP);
+		end
+	end
+end
+
+function BDT_TA_TEST_END(_playerid)
+	if(TA_FUNC(_playerid, 0, 0, 24, 0))then
+		AI_ClearStates(_playerid);
+		AI_SETWALKTYPE(_playerid, 1);
+		if(AI_NPCList[_playerid].StartWP ~= nil)then
+			AI_GOTO(_playerid, AI_NPCList[_playerid].StartWP);
+		end
+	end
+end
+
+function OnPlayerCommandText(playerid, cmdtext)
+	local cmd,params = GetCommand(cmdtext);
+	
+	if(cmd == "/help")then
+		if(params == "spawn")then
+			SendPlayerMessage(playerid,193,70,230,"/spawn [waran, wolf, lurker, goblin, scavenger]");
+		elseif(params == "goto")then
+			SendPlayerMessage(playerid,193,70,230,"/goto waypoint [wpname]");
+			SendPlayerMessage(playerid,193,70,230,"/goto world [colony, khorines, jhakendar]");
+			
+		else
+			SendPlayerMessage(playerid,193,70,230,"/help [spawn, goto]");
+		end
+	end
+	if(cmd == "/trade")then
+		local focus = GetFocus(playerid);
+		if(focus ~= -1)then
+			LoadTradingPlayers(playerid, focus);
+		end
+	end
+	
+		if(cmd == "/торг")then
+		local focus = GetFocus(playerid);
+		if(focus ~= -1)then
+			LoadTradingPlayers(playerid, focus);
+		end
+	end
+	
+	if(cmd == "/invisible")then
+		if(AI_PlayerList[playerid].Invisible)then
+			AI_PlayerList[playerid].Invisible = false;
+			SendPlayerMessage(playerid,193,70,230,"Invisible Off");
+		else
+			AI_PlayerList[playerid].Invisible = true;
+			SendPlayerMessage(playerid,193,70,230,"Invisible On");
+		end
+		
+	end
+	
+		if(cmd == "/инвизм")then
+		if(AI_PlayerList[playerid].Invisible)then
+			AI_PlayerList[playerid].Invisible = false;
+			SendPlayerMessage(playerid,193,70,230,"Invisible Off");
+		else
+			AI_PlayerList[playerid].Invisible = true;
+			SendPlayerMessage(playerid,193,70,230,"Invisible On");
+		end
+		
+	end
+	if(cmd == "/gettime")then
+		local hour,minute = GetTime();
+		SendPlayerMessage(playerid,193,70,230,"Time: "..hour..":"..minute);
+	end
+	if(cmd == "/settime")then
+		local spl = params:split(" ");
+		spl[1] = trim(spl[1]);
+		spl[2] = trim(spl[2]);
+		if(#spl >= 2)then
+			SetTime(tonumber(spl[1]), tonumber(spl[2]));
+			SendPlayerMessage(playerid,193,70,230,"Set Time: "..spl[1]..":"..spl[2]);
+		end
+	end
+	
+	if(cmd == "/goto")then
+		local spl = params:split(" ");
+		spl[1] = trim(spl[1]);
+		spl[2] = trim(spl[2]);
+		if(spl[1] == "waypoint")then
+			local wp = AI_WayNets[GetPlayerOrNPC(playerid).GP_World]:GetWaypoint(spl[2]);
+			if(wp ~= nil)then
+				SetPlayerPos(playerid, wp.x, wp.y, wp.z);
+			end
+		else
+			local worlds = {};
+			worlds["colony"] = "COLONY.ZEN";
+			worlds["khorines"] = "NEWWORLD\\NEWWORLD.ZEN";
+			worlds["jhakendar"] = "ADDON\\ADDONWORLD.ZEN";
+			SetPlayerWorld(playerid, worlds[spl[2]], "");
+		end
+	end
+	
+	if(cmd=="/orcattack")then
+		local f = true;
+		list = GetNPCwithGuild(AI_GUILD_Orc);
+			for key,val in ipairs(list) do
+				if(val.GP_World == "COLONY.ZEN")then
+					if(val.DailyRoutine == ORC_TA_TEST)then
+						val.DailyRoutine = ORC_TA_TEST_END;
+						f = false;
+					else
+						val.DailyRoutine = ORC_TA_TEST;
+						f = true;
+					end
+				end
+			end
+		if(f)then
+			SendPlayerMessage(playerid,193,70,230,"Orcattack On");
+		else
+			SendPlayerMessage(playerid,193,70,230,"Orcattack Off");
+		end
+	end
+	
+	if(cmd=="/бандитыатакуют")then
+		local f = true;
+		list = GetNPCwithGuild(AI_GUILD_GiantRat);
+			for key,val in ipairs(list) do
+				if(val.GP_World == "KHORINIS.ZEN")then
+					if(val.DailyRoutine == BDT_TA_TEST)then
+						val.DailyRoutine = BDT_TA_TEST_END;
+						f = false;
+					else
+						val.DailyRoutine = BDT_TA_TEST;
+						f = true;
+					end
+				end
+			end
+		if(f)then
+			SendPlayerMessage(playerid,193,70,230,"Бандиты атакуют On");
+		else
+			SendPlayerMessage(playerid,193,70,230,"Бандиты атакуют Off");
+		end
+	end
+	if(cmd == "/spawn")then
+		local wp = AI_WayNets[GetPlayerWorld(playerid)]:GetNearestWP(playerid);
+		SendPlayerMessage(playerid,193,70,230,"Spawned: "..params);
+		if(params == "wolf")then
+			SpawnNPC(Wolf(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "goblin")then
+			SpawnNPC(Gobbo_Green(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "waran")then
+			SpawnNPC(Waran(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "lurker")then
+			SpawnNPC(Lurker(), wp.name, GetPlayerWorld(playerid));
+		else
+			SpawnNPC(Scavenger(), wp.name, GetPlayerWorld(playerid));
+		end
+	end
+		
+		if(cmd == "/спва")then
+	--if GetPlayerName(playerid) == "Нуар" or GetPlayerName(playerid) == "Торговец" or GetPlayerName(playerid) == "Ингвар" or GetPlayerName(playerid) == "Мелвин" or GetPlayerName(playerid) == "Али" or GetPlayerName(playerid) == "Анзельм" or GetPlayerName(playerid) == "Владычица" or GetPlayerName(playerid) == "Скирон" or GetPlayerName(playerid) == "Нэйт" or GetPlayerName(playerid) == "Риенс" then
+		local wp = AI_WayNets[GetPlayerWorld(playerid)]:GetNearestWP(playerid);
+		SendPlayerMessage(playerid,193,70,230,"Spawned: "..params);
+		if(params == "волк")then
+			SpawnNPC(Wolf(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "гоблин")then
+			SpawnNPC(Gobbo_Green(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "варан")then
+			SpawnNPC(Waran(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "луркер")then
+			SpawnNPC(Lurker(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "падальщик")then
+			SpawnNPC(Scavenger(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "зомби1")then
+			SpawnNPC(Zombie(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "зомби2")then
+			SpawnNPC(Zombie2(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "зомби3")then
+			SpawnNPC(Zombie3(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "зомби4")then
+			SpawnNPC(Zombie4(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "скелет")then
+			SpawnNPC(Skeleton(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "орк-воин")then
+			SpawnNPC(OrcWarrior(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "орк-элитник")then
+			SpawnNPC(OrcElite(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "орк-шаман")then
+			SpawnNPC(OrcShaman(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "луркер")then
+			SpawnNPC(Lurker(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "гоблин")then
+			SpawnNPC(Gobbo_Green(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "чгоблин")then
+			SpawnNPC(Gobbo_Black(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "бандит")then
+			SpawnNPC(Bandit(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "стражник")then
+			SpawnNPC(Straz(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "стражник1")then
+			SpawnNPC(Straz1(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "стражник2")then
+			SpawnNPC(Straz2(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "боец")then
+			SpawnNPC(Naym(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "боец2")then
+			SpawnNPC(Naym2(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "послушник")then
+			SpawnNPC(Posluh(), wp.name, GetPlayerWorld(playerid));
+		elseif(params == "ящер")then
+			SpawnNPC(Yasher(), wp.name, GetPlayerWorld(playerid));
+		end
+--else
+--SendPlayerMessage(playerid,193,70,230,"Нахей пашол.");
+		--end
+	end
+		if(cmd == "/респмоб")then
+		DestroyAllNPC();
+		InitColonyNPC();
+		end
+	if(cmd == "/вп")then
+	local wp = AI_WayNets[GetPlayerWorld(playerid)]:GetNearestWP(playerid);
+		SendPlayerMessage(playerid,193,70,230,wp.name);
+	end
+end
