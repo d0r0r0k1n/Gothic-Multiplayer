@@ -1,0 +1,13 @@
+--Generated with ZEditor by Midas
+CreateTexture(2750, 2050, 5450, 6650, "Frame_GMPA.TGA")
+CreateDraw(2850, 2200, "Polowanie:", "Font_Old_20_White_Hi.TGA", 255, 255, 255)
+CreateDraw(2850, 2750, "Wilk", "Font_Old_10_White_Hi.TGA", 255, 255, 255)
+CreateDraw(4950, 2750, "(100/300)", "Font_Old_10_White_Hi.TGA", 255, 255, 255)
+CreateDraw(2850, 2550, "Ognisty Smok", "Font_Old_10_White_Hi.TGA", 255, 255, 255)
+CreateDraw(4950, 2550, "(5/10)", "Font_Old_10_White_Hi.TGA", 255, 255, 255)
+CreateDraw(2850, 2950, "Kamienny Golem", "Font_Old_10_White_Hi.TGA", 255, 255, 255)
+CreateDraw(2850, 3150, "Ognisty Golem", "Font_Old_10_White_Hi.TGA", 255, 255, 255)
+CreateDraw(2850, 3350, "Zwolej", "Font_Old_10_White_Hi.TGA", 255, 255, 255)
+CreateDraw(2850, 3650, "Lista sk³adnków:", "Font_Old_20_White_Hi.TGA", 255, 255, 255)
+CreateDraw(2850, 4000, "Szczaw królewski", "Font_Old_10_White_Hi.TGA", 255, 255, 255)
+CreateDraw(4950, 4000, "50", "Font_Old_10_White_Hi.TGA", 255, 255, 255)
